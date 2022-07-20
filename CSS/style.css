@@ -85,6 +85,7 @@ main .main-left p {
   margin-bottom: 15px;
   max-width: 75%;
   font-weight: 300;
+  cursor: default;
 }
 main .main-left p span {
   font-weight: 400;
@@ -93,6 +94,13 @@ main .main-left p span {
 }
 main .main-left p span:hover {
   color: rgb(218, 182, 91);
+}
+main .main-left .how-much {
+  display: flex;
+  margin-left: -40px;
+}
+main .main-left .how-much img {
+  z-index: -3;
 }
 main .main-left button {
   align-items: center;

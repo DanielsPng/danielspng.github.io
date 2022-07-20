@@ -112,6 +112,7 @@ main{
       margin-bottom: 15px;
       max-width: 75%;
       font-weight: 300;
+      cursor: default;
 
       span{
         font-weight: 400;
@@ -123,6 +124,14 @@ main{
       }
     }
     
+    .how-much{
+      img{
+        z-index: -3;
+      }
+      display: flex;
+      margin-left: -40px;
+     
+    }
 
    button{
      align-items: center;
@@ -199,7 +208,7 @@ main{
   }
 
   .description{
-  width: 100%;
+   width: 100%;
      
    }
 
