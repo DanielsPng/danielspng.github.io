@@ -115,6 +115,16 @@ main .main-left button {
   border: 1px solid rgb(218, 182, 91);
   color: white;
   border-radius: 4px;
+  transition: all 0.4s ease-in-out;
+}
+main .main-left button:hover {
+  transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+  background-image: linear-gradient(to right, #ff00cc, #7e3399, #334199);
+  border: 1px solid white;
+  box-shadow: 0 4px 15px 0 rgba(167, 155, 155, 0.75);
+  -webkit-animation: inear-gradient(to right, #ff00cc, #7e3399, #334199) 15s ease infinite;
+          animation: inear-gradient(to right, #ff00cc, #7e3399, #334199) 15s ease infinite;
 }
 main .main-right {
   display: flex;

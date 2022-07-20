@@ -4,6 +4,7 @@
   box-sizing: border-box;
 }
 
+
 body {
   background:radial-gradient(95.84% 95.84% at 96.11% 4.16%, rgba(255, 255, 255, 0.267) 0%, rgba(255, 255, 255, 0) 100%),  #07090C;
   background-repeat: no-repeat;
@@ -145,7 +146,23 @@ main{
       border: 1px solid rgb(218, 182, 91); 
       color: white;
       border-radius: 4px;
+      transition: all .4s ease-in-out;
     }
+
+    button:hover{
+    transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+    background-image: linear-gradient(to right,   #ff00cc,#7e3399,#334199);
+    border: 1px solid white;
+    box-shadow: 0 4px 15px 0 rgba(167, 155, 155, 0.75);
+    animation: inear-gradient(to right,   #ff00cc,#7e3399,#334199) 15s ease infinite;
+ 
+    }
+
+    
+    
 
     
   }
