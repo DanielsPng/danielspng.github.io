@@ -24,10 +24,14 @@ header .logo {
   border-bottom-right-radius: 10px;
   border-bottom-left-radius: 10px;
   box-shadow: 10px 10px 20px #07090C;
+  transition: all 0.4s ease-in-out;
 }
 header .logo img {
   margin-top: 30px;
   max-width: 80px;
+}
+header .logo:hover {
+  background-color: #272e38;
 }
 header .menu {
   margin: 0;
@@ -35,36 +39,6 @@ header .menu {
   display: flex;
   justify-content: flex-end;
   gap: 30px;
-  /*a{
-    text-decoration: none;
-    color: beige;
-    margin-left: 20px;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-size: large;
-    padding: 10px;
-  }  PRINCIPAL */
-  /* a:after{
-     content: "";
-     width: 0%;
-     height: 1px;
-     display: block;
-     transition: all 0.4s ease;
-     bottom: 25%;
-   }*/
-  /*a:hover{
-    padding-top: 30px;
-    background-color:#181C22;
-    border-bottom-right-radius: 10px;
-    border-bottom-left-radius: 10px;
-    box-shadow: 10px 10px 20px #07090c5d;
-    transition: all 0.8s ease;
-  } PRINCIPAL */
-  /* a:hover::after {
-     width: 100%;
-     height: 1px;
-     background-color: rgb(218, 182, 91);;
-
-   }*/
 }
 header .menu a {
   text-decoration: none;
@@ -75,7 +49,7 @@ header .menu a {
   padding: 10px;
 }
 header .menu a {
-  background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 0, 0, 0)), linear-gradient(to right, #ff00cc, #7e3399, #334199);
+  background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 0, 0, 0)), linear-gradient(to right, #BF953F, #FBF5B7, #AA771C);
   background-size: 100% 3px, 0 3px;
   background-position: 100% 100%, 0 100%;
   background-repeat: no-repeat;
@@ -91,6 +65,7 @@ main {
   align-items: center;
   /*border: 1px solid  red;*/
   height: 100vh;
+  box-shadow: 0 8px 6px -6px black;
 }
 main .main-left {
   padding: 40px;
@@ -100,6 +75,7 @@ main .main-left h1 {
   font-size: 70px;
   color: rgb(218, 182, 91);
   font-family: "Times New Roman", Times, serif;
+  font-weight: 400;
 }
 main .main-left p {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
@@ -107,24 +83,74 @@ main .main-left p {
   text-decoration: none;
   color: white;
   margin-bottom: 15px;
-  max-width: 80%;
+  max-width: 75%;
+  font-weight: 300;
+}
+main .main-left p span {
+  font-weight: 400;
+  font-size: 23px;
+  transition: all 0.4s ease-in-out;
+}
+main .main-left p span:hover {
+  color: rgb(218, 182, 91);
 }
 main .main-left button {
-  padding: 10px 35px;
-  background-color: #07090C;
+  align-items: center;
+  padding: 6px 35px;
   border: 1px solid rgb(218, 182, 91);
   color: white;
+  background-color: #07090C;
   border-radius: 4px;
   transition: all 0.4s ease-in-out;
+  position: relative;
+  cursor: pointer;
+  outline: none;
+  -o-border-image: 1px solid linear-gradient(to right, #BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C, #BF953F);
+     border-image: 1px solid linear-gradient(to right, #BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C, #BF953F);
+  background-size: 400%;
+  font-size: 20px;
+  font-weight: 350;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+main .main-left button:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  background: linear-gradient(90deg, #BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C);
+  background-size: 400%;
+  border-radius: 50px;
+  opacity: 0;
+  transition: 0.5s;
 }
 main .main-left button:hover {
-  transition: all 0.4s ease-in-out;
-  transition: all 0.4s ease-in-out;
-  background-image: linear-gradient(to right, #ff00cc, #7e3399, #334199);
-  border: 1px solid white;
-  box-shadow: 0 4px 15px 0 rgba(167, 155, 155, 0.75);
-  -webkit-animation: inear-gradient(to right, #ff00cc, #7e3399, #334199) 15s ease infinite;
-          animation: inear-gradient(to right, #ff00cc, #7e3399, #334199) 15s ease infinite;
+  -webkit-animation: animate 20s linear infinite;
+          animation: animate 20s linear infinite;
+}
+main .main-left button:hover::before {
+  filter: blur(25px);
+  opacity: 0.8;
+  -webkit-animation: animate 10s linear infinite;
+          animation: animate 10s linear infinite;
+}
+@-webkit-keyframes animate {
+  0% {
+    background-position: 0%;
+  }
+  100% {
+    background-position: 400%;
+  }
+}
+@keyframes animate {
+  0% {
+    background-position: 0%;
+  }
+  100% {
+    background-position: 400%;
+  }
 }
 main .main-right {
   display: flex;
@@ -148,13 +174,6 @@ main .main-right img.think {
   z-index: -2;
 }
 
-.circle:hover {
-  background-color: linear-gradient(114deg, rgb(255, 0, 204) 0%, rgb(126, 51, 153) 52%, rgb(51, 65, 153) 100%);
-}
-
-.bottom img.rasg {
-  flex-direction: column;
-  z-index: 1;
-  margin-top: -150px;
-  max-width: 1350px;
+.description {
+  width: 100%;
 }/*# sourceMappingURL=style.css.map */
