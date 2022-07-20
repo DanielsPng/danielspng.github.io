@@ -60,15 +60,34 @@ header{
     }*/
 
 
-    a:hover{
+    /*a:hover{
       padding-top: 30px;
       background-color:#181C22;
       border-bottom-right-radius: 10px;
       border-bottom-left-radius: 10px;
       box-shadow: 10px 10px 20px #07090c5d;
       transition: all 0.8s ease;
-    }
+    }   PRINCIPAL */
     
+    a:after {
+      display: block;
+      position: absolute;
+      margin: 0;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      content: '.';
+      color: transparent;
+      width: 1px;
+      height: 1px;
+      border-radius: 50%;
+      background: transparent;
+    }
+
+    a:hover:after {
+      animation: circle 1.5s ease-in forwards;
+    }
     
 
    /* a:hover::after {
