@@ -63,7 +63,7 @@ main {
   display: flex;
   align-items: center;
   /*border: 1px solid  red;*/
-  height: 100vh;
+  height: 91.5vh;
   box-shadow: rgb(0, 0, 0) 0px 20px 30px -10px;
 }
 main .main-left {
@@ -83,7 +83,7 @@ main .main-left p {
   text-decoration: none;
   color: white;
   margin-bottom: 15px;
-  max-width: 75%;
+  max-width: 60%;
   font-weight: 300;
   cursor: default;
 }
@@ -95,20 +95,18 @@ main .main-left p span {
 main .main-left p span:hover {
   color: rgb(218, 182, 91);
 }
-main .main-left .how-much {
-  display: flex;
-  margin-left: -70px;
-  padding: 10%;
-}
 main .main-left .how-much img {
-  z-index: -3;
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  left: 0;
 }
 main .main-left button {
   align-items: center;
   padding: 6px 35px;
   border: 1px solid rgb(218, 182, 91);
   color: white;
-  background-color: #07090C;
+  background-color: transparent;
   border-radius: 4px;
   transition: all 0.4s ease-in-out;
   position: relative;
@@ -168,6 +166,10 @@ main .main-right {
 main .main-right img.think {
   z-index: -1;
   max-width: 410px;
+  bottom: 0;
+  position: absolute;
+  display: flex;
+  right: 0;
 }
 
 .circle {
@@ -229,7 +231,7 @@ main .main-right img.think {
   padding: 6px 35px;
   border: 1px solid rgb(218, 182, 91);
   color: white;
-  background-color: #07090C;
+  background-color: transparent;
   border-radius: 4px;
   transition: all 0.4s ease-in-out;
   position: relative;
