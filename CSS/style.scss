@@ -268,12 +268,17 @@ main{
       gap: 16px;
       
       
+      .tilt{
+      
+    }
+      
       ul{
         justify-content: center;
         align-items: center;
         display: flex;
         padding: 0;
         width: 720px; 
+  
       p{
         z-index: -1;
         padding: 10px;
@@ -299,6 +304,7 @@ main{
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    
       }
       }
   
@@ -397,12 +403,3 @@ main{
  
 }
 
-.tilt {
-  transition: transform .2s ease-out;
-  position: relative;
-  transition: transform .2s ease-out;
-  transform-style: preserve-3d;
-  width: 300px;
-  height: 300px;
-  background-color: red;
-}
