@@ -267,13 +267,13 @@ main{
       flex-direction: row;
       gap: 16px;
       
+      
       ul{
         justify-content: center;
         align-items: center;
         display: flex;
         padding: 0;
-        width: 720px;
-        
+        width: 720px; 
       p{
         z-index: -1;
         padding: 10px;
@@ -287,9 +287,11 @@ main{
       }
 
       img{
+      
         width: 100%;
         box-shadow: rgba(0, 0, 0, 0.911) 0px 5px 15px;
       }
+      
 
       li{
         margin: 0 10px;
@@ -395,4 +397,12 @@ main{
  
 }
 
-
+.tilt {
+  transition: transform .2s ease-out;
+  position: relative;
+  transition: transform .2s ease-out;
+  transform-style: preserve-3d;
+  width: 300px;
+  height: 300px;
+  background-color: red;
+}
