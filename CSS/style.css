@@ -60,15 +60,15 @@ header .menu a:hover {
 }
 
 main {
-  margin-left: 30px;
   display: flex;
   align-items: center;
   /*border: 1px solid  red;*/
   height: 100vh;
-  box-shadow: 0 8px 6px -6px black;
+  box-shadow: rgb(0, 0, 0) 0px 20px 30px -10px;
 }
 main .main-left {
   padding: 40px;
+  padding-left: 10%;
   margin-right: 40px;
 }
 main .main-left h1 {
@@ -98,7 +98,7 @@ main .main-left p span:hover {
 main .main-left .how-much {
   display: flex;
   margin-left: -70px;
-  padding: 30px;
+  padding: 10%;
 }
 main .main-left .how-much img {
   z-index: -3;
@@ -185,31 +185,33 @@ main .main-right img.think {
 
 .description {
   width: 100%;
-  margin-left: 30px;
   display: flex;
   align-items: center;
   /*border: 1px solid  red;*/
-  height: 100vh;
   box-shadow: 0 8px 6px -6px black;
 }
 .description .main-right-2 {
   padding: 40px;
+  text-align: right;
 }
 .description .main-right-2 h1 {
   font-size: 70px;
   color: rgb(218, 182, 91);
   font-family: "Times New Roman", Times, serif;
   font-weight: 400;
+  text-align: right;
+  max-width: 90%;
 }
 .description .main-right-2 p {
+  text-align: right;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-size: 20px;
   text-decoration: none;
   color: white;
   margin-bottom: 15px;
-  max-width: 75%;
   font-weight: 300;
   cursor: default;
+  max-width: 90%;
 }
 .description .main-right-2 p span {
   font-weight: 400;
@@ -219,15 +221,10 @@ main .main-right img.think {
 .description .main-right-2 p span:hover {
   color: rgb(218, 182, 91);
 }
-.description .main-right-2 .how-much {
-  display: flex;
-  margin-left: -70px;
-  padding: 30px;
+.description .main-right-2 .btn {
+  max-width: 90%;
 }
-.description .main-right-2 .how-much img {
-  z-index: -3;
-}
-.description .main-right-2 button {
+.description .main-right-2 .btn button {
   align-items: center;
   padding: 6px 35px;
   border: 1px solid rgb(218, 182, 91);
@@ -245,7 +242,7 @@ main .main-right img.think {
   font-weight: 350;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
-.description .main-right-2 button:before {
+.description .main-right-2 .btn button:before {
   content: "";
   position: absolute;
   top: 0;
@@ -259,11 +256,11 @@ main .main-right img.think {
   opacity: 0;
   transition: 0.5s;
 }
-.description .main-right-2 button:hover {
+.description .main-right-2 .btn button:hover {
   -webkit-animation: animate 20s linear infinite;
           animation: animate 20s linear infinite;
 }
-.description .main-right-2 button:hover::before {
+.description .main-right-2 .btn button:hover::before {
   filter: blur(25px);
   opacity: 0.8;
   -webkit-animation: animate 10s linear infinite;
@@ -283,7 +280,7 @@ main .main-right img.think {
 }
 .description .main-left-2 img.think {
   z-index: -1;
-  max-width: 410px;
+  max-width: 480px;
 }
 .description .circle {
   position: absolute;
