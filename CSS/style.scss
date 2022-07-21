@@ -6,7 +6,7 @@
 
 
 body {
-  background:radial-gradient(95.84% 95.84% at 96.11% 4.16%, rgba(255, 255, 255, 0.329) 0%, rgba(255, 255, 255, 0) 100%),  #07090C;
+  background:radial-gradient(59% 78.63% at 95.38% 41%, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, #07090C;
   background-repeat: no-repeat;
   overflow-x: hidden;
 }
@@ -92,7 +92,7 @@ main{
   height: 91.5vh;
   box-shadow: rgb(0, 0, 0) 0px 20px 30px -10px;
 
-  
+
   .main-left{
     padding: 40px ; 
     padding-left: 10%;
@@ -123,14 +123,11 @@ main{
       }
     }
     
-    .how-much{
-      img{
+    img.how-much{
         display: flex;
         position: absolute;
-        bottom: 0;
-        left: 0;
-      }
-     
+        bottom: 30px;
+        margin-left: -8%;
     }
 
    button{
@@ -205,17 +202,22 @@ main{
     left: 0px;
     height: 100%;
     width: 100%;
-    background-color: rgb(236, 236, 236);
+    background: rgba(255, 255, 255, 0.28);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(7.1px);
+    -webkit-backdrop-filter: blur(7.1px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
     clip-path: circle(400px at right 500px);
     display: inline-block;
     z-index: -2;
   }
 
-  .description{
-   width: 100%;
-  display: flex;
-  align-items: center;
-  /*border: 1px solid  red;*/
+  sub-main{
+    z-index: -1000;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    /*border: 1px solid  red;*/
   -webkit-box-shadow: 0 8px 6px -6px black;
 	   -moz-box-shadow: 0 8px 6px -6px black;
 	        box-shadow: 0 8px 6px -6px black;
@@ -282,7 +284,6 @@ main{
          left: 0;
          right: 0;
          bottom: 0;
-         z-index: -1;
          background: linear-gradient(90deg,  #BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C);
          background-size: 400%;
          border-radius: 50px;
@@ -314,7 +315,6 @@ main{
     display: flex;
     flex-direction: column;
       img.think{
-        z-index: -1;
         max-width: 480px;
       }
     }

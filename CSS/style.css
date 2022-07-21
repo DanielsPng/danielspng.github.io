@@ -5,7 +5,7 @@
 }
 
 body {
-  background: radial-gradient(95.84% 95.84% at 96.11% 4.16%, rgba(255, 255, 255, 0.329) 0%, rgba(255, 255, 255, 0) 100%), #07090C;
+  background: radial-gradient(59% 78.63% at 95.38% 41%, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 100%), #07090C;
   background-repeat: no-repeat;
   overflow-x: hidden;
 }
@@ -95,11 +95,11 @@ main .main-left p span {
 main .main-left p span:hover {
   color: rgb(218, 182, 91);
 }
-main .main-left .how-much img {
+main .main-left img.how-much {
   display: flex;
   position: absolute;
-  bottom: 0;
-  left: 0;
+  bottom: 30px;
+  margin-left: -8%;
 }
 main .main-left button {
   align-items: center;
@@ -178,25 +178,30 @@ main .main-right img.think {
   left: 0px;
   height: 100%;
   width: 100%;
-  background-color: rgb(236, 236, 236);
+  background: rgba(255, 255, 255, 0.28);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(7.1px);
+  -webkit-backdrop-filter: blur(7.1px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
   -webkit-clip-path: circle(400px at right 500px);
           clip-path: circle(400px at right 500px);
   display: inline-block;
   z-index: -2;
 }
 
-.description {
+sub-main {
+  z-index: -1000;
   width: 100%;
   display: flex;
   align-items: center;
   /*border: 1px solid  red;*/
   box-shadow: 0 8px 6px -6px black;
 }
-.description .main-right-2 {
+sub-main .main-right-2 {
   padding: 40px;
   text-align: right;
 }
-.description .main-right-2 h1 {
+sub-main .main-right-2 h1 {
   font-size: 70px;
   color: rgb(218, 182, 91);
   font-family: "Times New Roman", Times, serif;
@@ -204,7 +209,7 @@ main .main-right img.think {
   text-align: right;
   max-width: 90%;
 }
-.description .main-right-2 p {
+sub-main .main-right-2 p {
   text-align: right;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-size: 20px;
@@ -215,18 +220,18 @@ main .main-right img.think {
   cursor: default;
   max-width: 90%;
 }
-.description .main-right-2 p span {
+sub-main .main-right-2 p span {
   font-weight: 400;
   font-size: 23px;
   transition: all 0.4s ease-in-out;
 }
-.description .main-right-2 p span:hover {
+sub-main .main-right-2 p span:hover {
   color: rgb(218, 182, 91);
 }
-.description .main-right-2 .btn {
+sub-main .main-right-2 .btn {
   max-width: 90%;
 }
-.description .main-right-2 .btn button {
+sub-main .main-right-2 .btn button {
   align-items: center;
   padding: 6px 35px;
   border: 1px solid rgb(218, 182, 91);
@@ -244,25 +249,24 @@ main .main-right img.think {
   font-weight: 350;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
-.description .main-right-2 .btn button:before {
+sub-main .main-right-2 .btn button:before {
   content: "";
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  z-index: -1;
   background: linear-gradient(90deg, #BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C);
   background-size: 400%;
   border-radius: 50px;
   opacity: 0;
   transition: 0.5s;
 }
-.description .main-right-2 .btn button:hover {
+sub-main .main-right-2 .btn button:hover {
   -webkit-animation: animate 20s linear infinite;
           animation: animate 20s linear infinite;
 }
-.description .main-right-2 .btn button:hover::before {
+sub-main .main-right-2 .btn button:hover::before {
   filter: blur(25px);
   opacity: 0.8;
   -webkit-animation: animate 10s linear infinite;
@@ -276,15 +280,14 @@ main .main-right img.think {
     background-position: 400%;
   }
 }
-.description .main-left-2 {
+sub-main .main-left-2 {
   display: flex;
   flex-direction: column;
 }
-.description .main-left-2 img.think {
-  z-index: -1;
+sub-main .main-left-2 img.think {
   max-width: 480px;
 }
-.description .circle {
+sub-main .circle {
   position: absolute;
   top: 0;
   left: 0px;
