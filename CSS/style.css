@@ -178,10 +178,22 @@ main .main-right img.think {
   left: 0px;
   height: 100%;
   width: 100%;
-  background: rgba(255, 255, 255, 0.28);
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.295);
   -webkit-clip-path: circle(400px at right 500px);
           clip-path: circle(400px at right 500px);
+  display: inline-block;
+  z-index: -2;
+}
+
+.circle2 {
+  position: absolute;
+  top: 0;
+  left: 0px;
+  height: 100%;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.795);
+  -webkit-clip-path: circle(300px at right 500px);
+          clip-path: circle(300px at right 500px);
   display: inline-block;
   z-index: -2;
 }
@@ -192,7 +204,7 @@ sub-main {
   display: flex;
   align-items: center;
   /*border: 1px solid  red;*/
-  box-shadow: 0 8px 6px -6px black;
+  box-shadow: rgb(0, 0, 0) 0px 20px 30px -10px;
 }
 sub-main .main-right-2 {
   padding: 40px;
@@ -225,57 +237,39 @@ sub-main .main-right-2 p span {
 sub-main .main-right-2 p span:hover {
   color: rgb(218, 182, 91);
 }
-sub-main .main-right-2 .btn {
-  max-width: 90%;
+sub-main .main-right-2 .container-job {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
 }
-sub-main .main-right-2 .btn button {
+sub-main .main-right-2 .container-job ul {
+  justify-content: center;
   align-items: center;
-  padding: 6px 35px;
-  border: 1px solid rgb(218, 182, 91);
-  color: white;
-  background-color: transparent;
-  border-radius: 4px;
-  transition: all 0.4s ease-in-out;
-  position: relative;
-  cursor: pointer;
-  outline: none;
-  -o-border-image: 1px solid linear-gradient(to right, #BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C, #BF953F);
-     border-image: 1px solid linear-gradient(to right, #BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C, #BF953F);
-  background-size: 400%;
-  font-size: 20px;
-  font-weight: 350;
+  display: flex;
+  padding: 0;
+  width: 720px;
+}
+sub-main .main-right-2 .container-job ul p {
+  z-index: -1;
+  padding: 10px;
+  background-color: #BF953F;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
 }
-sub-main .main-right-2 .btn button:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: linear-gradient(90deg, #BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C);
-  background-size: 400%;
-  border-radius: 50px;
-  opacity: 0;
-  transition: 0.5s;
+sub-main .main-right-2 .container-job ul img {
+  width: 100%;
+  box-shadow: rgba(0, 0, 0, 0.911) 0px 5px 15px;
 }
-sub-main .main-right-2 .btn button:hover {
-  -webkit-animation: animate 20s linear infinite;
-          animation: animate 20s linear infinite;
-}
-sub-main .main-right-2 .btn button:hover::before {
-  filter: blur(25px);
-  opacity: 0.8;
-  -webkit-animation: animate 10s linear infinite;
-          animation: animate 10s linear infinite;
-}
-@keyframes animate {
-  0% {
-    background-position: 0%;
-  }
-  100% {
-    background-position: 400%;
-  }
+sub-main .main-right-2 .container-job ul li {
+  margin: 0 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 sub-main .main-left-2 {
   display: flex;
@@ -297,7 +291,7 @@ sub-main .circle {
   z-index: -2;
 }
 
-.designer {
+.developer {
   z-index: -1;
   background-image: url(/assets/images/face-statue.png);
   background-repeat: no-repeat;
@@ -305,28 +299,34 @@ sub-main .circle {
   background-size: 500px;
   display: flex;
   height: 100vh;
+  box-shadow: rgb(0, 0, 0) 0px 20px 30px -10px;
 }
-.designer .glass {
+.developer .glass {
+  z-index: 0;
+  position: absolute;
+  height: 100%;
+  right: 0;
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  width: 50%;
-  justify-content: right;
+  justify-content: center;
+  width: 48%;
   background: rgba(255, 255, 255, 0.28);
-  border-radius: 16px;
+  border-bottom-left-radius: 20px;
+  border-top-left-radius: 20px;
   box-shadow: 0 4px 30px rgb(0, 0, 0);
-  backdrop-filter: blur(7.1px);
-  -webkit-backdrop-filter: blur(7.1px);
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(3.4px);
+  -webkit-backdrop-filter: blur(3.4px);
 }
-.designer .glass h1 {
+.developer .glass h1 {
   font-size: 70px;
   color: rgb(255, 255, 255);
   font-family: "Times New Roman", Times, serif;
   font-weight: 400;
   text-align: center;
-  justify-content: center;
-  align-items: center;
+  padding-bottom: 10px;
 }
-.designer .glass button {
+.developer .glass button {
   align-items: center;
   padding: 6px 35px;
   border: 1px solid rgb(218, 182, 91);
@@ -343,4 +343,8 @@ sub-main .circle {
   font-size: 20px;
   font-weight: 350;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+.developer .glass button:hover {
+  color: #0f0f0f;
+  background: #e6c27a;
 }/*# sourceMappingURL=style.css.map */
