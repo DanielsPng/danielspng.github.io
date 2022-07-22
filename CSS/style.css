@@ -425,14 +425,18 @@ footer .menu {
   margin-right: 10%;
   border-radius: 10px;
   width: 80%;
-  box-shadow: 10px 10px 20px #252525;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.7960784314);
 }
 footer .menu .links {
   padding: 20px;
 }
 footer .menu .links a {
-  padding: 30px;
+  padding: 50px;
   font-size: 20px;
+  transition: 0.4s;
+}
+footer .menu .links a:hover {
+  color: #07090C;
 }
 footer .menu a {
   text-decoration: none;
@@ -448,4 +452,5 @@ footer .menu a img:hover {
   box-shadow: 10px 10px 20px #080808;
   filter: invert(0%);
   border-radius: 20%;
+  transform: rotate(10deg);
 }/*# sourceMappingURL=style.css.map */

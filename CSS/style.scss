@@ -487,13 +487,17 @@ footer{
     margin-right: 10%;
     border-radius: 10px;
     width: 80%;
-    box-shadow: 10px 10px 20px #252525;
+    box-shadow: 10px 10px 20px #000000cb;
 
     .links{
       padding: 20px;
       a{
-        padding: 30px;
+        padding: 50px;
         font-size: 20px;
+        transition: .4s;
+      }
+      a:hover{
+        color: #07090C;
       }
     }
     
@@ -513,6 +517,7 @@ footer{
         box-shadow: 10px 10px 20px #080808;
         filter: invert(0%);
         border-radius: 20%;
+        transform: rotate(10deg);
       }
     }
   
