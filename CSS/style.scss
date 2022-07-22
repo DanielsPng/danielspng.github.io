@@ -469,7 +469,14 @@ footer{
   justify-content: center;
   align-items: center;
   display: flex;
-  height: 80vh;
+  flex-direction: column;
+  height: 60vh;
+  background-image: url(/assets/images/white-background-2.jpg);
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: 900px;
+
+
   
   
   .menu{
@@ -480,22 +487,38 @@ footer{
     margin-right: 10%;
     border-radius: 10px;
     width: 80%;
+    box-shadow: 10px 10px 20px #252525;
 
+    .links{
+      padding: 20px;
+      a{
+        padding: 30px;
+        font-size: 20px;
+      }
+    }
     
     a{
       
       text-decoration: none;
       color: #ffffff;
       font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+     
+     
+      img{
+        transition: .4s;
+        filter: invert(100%);
+        width: 50px;
+      }
+      img:hover{
+        box-shadow: 10px 10px 20px #080808;
+        filter: invert(0%);
+        border-radius: 20%;
+      }
     }
   
 
   }
  
-  .links{
-    background-color: #feffad;
-    height: 20vh;
-  }
 }
 
 
