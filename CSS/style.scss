@@ -4,6 +4,17 @@
   box-sizing: border-box;
 }
 
+@media screen and (max-width: 992px) {
+  .menu{
+   background-color: blue;
+ }
+ .main-left{
+  p{
+    font-size: 5px;
+
+  }
+ }
+}
 
 body {
   background:radial-gradient(59% 78.63% at 95.38% 41%, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, #07090C;
@@ -89,9 +100,11 @@ main{
   /*border: 1px solid  red;*/
   height: 91.5vh;
   box-shadow: rgb(0, 0, 0) 0px 20px 30px -10px;
+ 
 
 
   .main-left{
+
     padding: 40px ; 
     padding-left: 10%;
     margin-right: 40px;
