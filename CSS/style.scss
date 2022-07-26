@@ -182,6 +182,9 @@ nav {
 
 @media (max-width: 999px) {
 
+  .main-left h1{
+    font-size: 5px;
+   }
  
   body {
     overflow-x: hidden;
@@ -354,6 +357,7 @@ main{
       position: absolute;
       display: flex;
       right: 0;
+      object-fit: contain;
       }
     }
   }

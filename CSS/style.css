@@ -157,6 +157,9 @@ nav .nav-list.active {
 }
 
 @media (max-width: 999px) {
+  .main-left h1 {
+    font-size: 5px;
+  }
   body {
     overflow-x: hidden;
   }
@@ -332,6 +335,8 @@ main .main-right img.think {
   position: absolute;
   display: flex;
   right: 0;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 .circle {
