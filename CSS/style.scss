@@ -181,12 +181,17 @@ nav {
 }
 
 @media (max-width: 999px) {
+  .think img{
+    margin-left: 40px;
+  }
   .text{
     align-items: center;
     display: flex;
     flex-direction: column;
     text-align: center;
-
+  }
+  .main-left p{
+    max-width: 100%;
   }
   .main-right img{
     opacity: 50%;
@@ -229,7 +234,10 @@ nav {
     display: block;
   }
 
-  
+  .container-job {
+    max-width: 10px;
+  }
+
   
 }
 
@@ -287,7 +295,6 @@ main{
       text-decoration: none;
       color: white;
       margin-bottom: 15px;
-      max-width: 60%;
       font-weight: 300;
       cursor: default;
 
@@ -399,7 +406,7 @@ main{
   }
 
   sub-main{
-    z-index: -1000;
+    z-index: -1;
     width: 100%;
     display: flex;
     align-items: center;
@@ -443,8 +450,9 @@ main{
 
     .container-job{
       display: flex;
-      flex-direction: row;
+  
       gap: 16px;
+      z-index: -2;
       
       
       
@@ -468,18 +476,17 @@ main{
       }
 
       img{
-      
         width: 100%;
         box-shadow: rgba(0, 0, 0, 0.911) 0px 5px 15px;
       }
       
 
       li{
-        margin: 0 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+      margin: 0 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
     
       }
       }
@@ -494,8 +501,10 @@ main{
   .main-left-2{
     display: flex;
     flex-direction: column;
+     
       img.think{
         max-width: 480px;
+       
       }
     }
   
@@ -543,7 +552,7 @@ main{
   -webkit-backdrop-filter: blur(9px);
 
     h1{
-      font-size: 70px;
+      font-size: calc(2em + 3vw);
       color: rgb(255, 255, 255);
       font-family: 'Times New Roman', Times, serif;
       font-weight: 400;
@@ -607,7 +616,7 @@ main{
   -webkit-backdrop-filter: blur(9px);
 
     h1{
-      font-size: 70px;
+      font-size: calc(2em + 3vw);
       color: rgb(255, 255, 255);
       font-family: 'Times New Roman', Times, serif;
       font-weight: 400;

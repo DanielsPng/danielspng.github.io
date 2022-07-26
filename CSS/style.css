@@ -157,11 +157,17 @@ nav .nav-list.active {
 }
 
 @media (max-width: 999px) {
+  .think img {
+    margin-left: 40px;
+  }
   .text {
     align-items: center;
     display: flex;
     flex-direction: column;
     text-align: center;
+  }
+  .main-left p {
+    max-width: 100%;
   }
   .main-right img {
     opacity: 50%;
@@ -201,6 +207,9 @@ nav .nav-list.active {
   }
   .mobile-menu {
     display: block;
+  }
+  .container-job {
+    max-width: 10px;
   }
 }
 @-webkit-keyframes navLinkFade {
@@ -260,7 +269,6 @@ main .main-left p {
   text-decoration: none;
   color: white;
   margin-bottom: 15px;
-  max-width: 60%;
   font-weight: 300;
   cursor: default;
 }
@@ -378,7 +386,7 @@ main .main-right img.think {
 }
 
 sub-main {
-  z-index: -1000;
+  z-index: -1;
   width: 100%;
   display: flex;
   align-items: center;
@@ -418,8 +426,8 @@ sub-main .main-right-2 p span:hover {
 }
 sub-main .main-right-2 .container-job {
   display: flex;
-  flex-direction: row;
   gap: 16px;
+  z-index: -2;
 }
 sub-main .main-right-2 .container-job ul {
   justify-content: center;
@@ -498,7 +506,7 @@ sub-main .circle {
   -webkit-backdrop-filter: blur(9px);
 }
 .developer .glass h1 {
-  font-size: 70px;
+  font-size: calc(2em + 3vw);
   color: rgb(255, 255, 255);
   font-family: "Times New Roman", Times, serif;
   font-weight: 400;
@@ -555,7 +563,7 @@ sub-main .circle {
   -webkit-backdrop-filter: blur(9px);
 }
 .designer .glass h1 {
-  font-size: 70px;
+  font-size: calc(2em + 3vw);
   color: rgb(255, 255, 255);
   font-family: "Times New Roman", Times, serif;
   font-weight: 400;
