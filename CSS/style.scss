@@ -181,11 +181,11 @@ nav {
 }
 
 @media (max-width: 999px) {
-  .main-left{
+  .text{
     align-items: center;
     display: flex;
     flex-direction: column;
-    
+
   }
   .main-right img{
     opacity: 50%;
@@ -275,7 +275,7 @@ main{
     padding-left: 10%;
     margin-right: 40px;
     h1{
-      font-size: calc(2em + 3vw);
+      font-size: calc(3em + 3vw);
       color: rgb(218, 182, 91);
       font-family: 'Times New Roman', Times, serif;
       font-weight: 400;
