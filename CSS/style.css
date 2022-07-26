@@ -103,7 +103,6 @@ nav {
   gap: 30px;
 }
 nav .logo {
-  background-color: #181C22;
   border-bottom-right-radius: 10px;
   border-bottom-left-radius: 10px;
   box-shadow: 10px 10px 20px #07090C;
@@ -140,6 +139,9 @@ nav .nav-list {
 nav .nav-list li {
   margin-left: 32px;
 }
+nav .nav-list.active {
+  transform: translateX(0);
+}
 
 .mobile-menu {
   display: none;
@@ -159,6 +161,7 @@ nav .nav-list li {
     overflow-x: hidden;
   }
   .nav-list {
+    margin-top: 10px;
     position: absolute;
     top: 8vh;
     right: 0;
@@ -172,7 +175,8 @@ nav .nav-list li {
     -webkit-backdrop-filter: blur(5px);
     flex-direction: column;
     align-items: center;
-    justify-content: space-around;
+    gap: 15%;
+    justify-content: center;
     transform: translateX(100%);
     transition: transform 0.3s ease-in;
   }
@@ -184,10 +188,6 @@ nav .nav-list li {
     display: block;
   }
 }
-.nav-list.active {
-  transform: translateX(0);
-}
-
 @-webkit-keyframes navLinkFade {
   from {
     opacity: 0;
@@ -198,7 +198,6 @@ nav .nav-list li {
     transform: translateX(0);
   }
 }
-
 @keyframes navLinkFade {
   from {
     opacity: 0;
