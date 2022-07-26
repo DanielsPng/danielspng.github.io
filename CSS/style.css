@@ -48,22 +48,7 @@ body {
     margin: 8px;
   }
 
-  .logo{
-    background-color: #181C22;
-    padding: 20px;
-    border-bottom-right-radius: 10px;
-    border-bottom-left-radius: 10px;
-    box-shadow: 10px 10px 20px #07090C;
-    transition: all .4s ease-in-out;
-
-
-
-    img{
-      margin-top: 30px;
-      max-width: 80px;
-    }
-
-  }
+  .
 
   .logo:hover{
      background-color: #272e38;
@@ -109,38 +94,50 @@ body {
     }
   }
 }*/
-a {
-  color: #fff;
-  text-decoration: none;
-  transition: 0.3s;
-}
-
-a:hover {
-  opacity: 0.7;
-}
-
-.logo {
-  font-size: 24px;
-  text-transform: uppercase;
-  letter-spacing: 4px;
-}
-
 nav {
   display: flex;
   justify-content: space-around;
   align-items: center;
   font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
-  background: #23232e;
-  height: 8vh;
+  background: none;
+  gap: 30px;
 }
-
-.nav-list {
+nav .logo {
+  background-color: #181C22;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  box-shadow: 10px 10px 20px #07090C;
+  transition: all 0.4s ease-in-out;
+}
+nav .logo img {
+  margin-top: 10px;
+  max-width: 120px;
+  padding: 10px;
+  cursor: pointer;
+}
+nav a {
+  text-decoration: none;
+  color: beige;
+  margin-left: 20px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 20px;
+  padding: 10px;
+}
+nav a {
+  background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 0, 0, 0)), linear-gradient(to right, #BF953F, #FBF5B7, #AA771C);
+  background-size: 100% 3px, 0 3px;
+  background-position: 100% 100%, 0 100%;
+  background-repeat: no-repeat;
+  transition: background-size 400ms;
+}
+nav a:hover {
+  background-size: 0 3px, 100% 3px;
+}
+nav .nav-list {
   list-style: none;
   display: flex;
 }
-
-.nav-list li {
-  letter-spacing: 3px;
+nav .nav-list li {
   margin-left: 32px;
 }
 
@@ -167,7 +164,12 @@ nav {
     right: 0;
     width: 50vw;
     height: 92vh;
-    background: #23232e;
+    background: rgba(54, 54, 54, 0.2);
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(5px);
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
