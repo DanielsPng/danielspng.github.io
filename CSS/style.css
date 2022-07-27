@@ -141,11 +141,14 @@ nav .nav-list li {
 }
 nav .nav-list.active {
   transform: translateX(0);
+  z-index: 1;
+  top: 0;
 }
 
 .mobile-menu {
   display: none;
   cursor: pointer;
+  z-index: 2;
 }
 
 .mobile-menu div {
@@ -166,11 +169,18 @@ nav .nav-list.active {
     flex-direction: column;
     text-align: center;
   }
-  .main-left p {
-    max-width: 100%;
+  .text2 {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+  .main-left img {
+    opacity: 0;
   }
   .main-right img {
-    opacity: 50%;
+    opacity: 40%;
+    width: 90%;
   }
   .circle2 {
     opacity: 0;
@@ -182,12 +192,11 @@ nav .nav-list.active {
     overflow-x: hidden;
   }
   .nav-list {
-    margin-top: 10px;
     position: absolute;
     top: 8vh;
     right: 0;
     width: 50vw;
-    height: 92vh;
+    height: 100vh;
     background: rgba(54, 54, 54, 0.2);
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
@@ -255,7 +264,6 @@ main {
 main .main-left {
   padding: 40px;
   padding-left: 10%;
-  margin-right: 40px;
 }
 main .main-left h1 {
   font-size: calc(3em + 3vw);
@@ -271,6 +279,9 @@ main .main-left p {
   margin-bottom: 15px;
   font-weight: 300;
   cursor: default;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  word-break: break-word;
 }
 main .main-left p span {
   font-weight: 400;
@@ -394,19 +405,21 @@ sub-main {
   box-shadow: rgb(0, 0, 0) 0px 20px 30px -10px;
 }
 sub-main .main-right-2 {
+  background-image: url(/assets/images/new-statue.png);
+  background-repeat: no-repeat;
+  background-size: 400px;
   padding: 40px;
-  text-align: right;
+  text-align: end;
+  height: 100vh;
 }
 sub-main .main-right-2 h1 {
-  font-size: 70px;
+  font-size: calc(3em + 3vw);
   color: rgb(218, 182, 91);
   font-family: "Times New Roman", Times, serif;
   font-weight: 400;
-  text-align: right;
   max-width: 90%;
 }
 sub-main .main-right-2 p {
-  text-align: right;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-size: 20px;
   text-decoration: none;
@@ -437,7 +450,7 @@ sub-main .main-right-2 .container-job ul {
   width: 720px;
 }
 sub-main .main-right-2 .container-job ul p {
-  z-index: -1;
+  z-index: 0;
   padding: 10px;
   background-color: #BF953F;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
@@ -448,6 +461,7 @@ sub-main .main-right-2 .container-job ul p {
   border-bottom-left-radius: 10px;
 }
 sub-main .main-right-2 .container-job ul img {
+  z-index: 1;
   width: 100%;
   box-shadow: rgba(0, 0, 0, 0.911) 0px 5px 15px;
 }
