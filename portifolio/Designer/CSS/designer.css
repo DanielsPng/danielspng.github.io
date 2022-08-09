@@ -1,7 +1,8 @@
 * {
   padding: 0;
   margin: 0;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 body {
@@ -13,83 +14,124 @@ body {
 header {
   width: 100%;
   height: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding: 28px;
 }
+
 header .logo {
   background-color: #181C22;
   padding: 20px;
   border-bottom-right-radius: 10px;
   border-bottom-left-radius: 10px;
-  box-shadow: 10px 10px 20px rgba(7, 9, 12, 0.2941176471);
-  transition: all 0.4s ease-in-out;
+  -webkit-box-shadow: 10px 10px 20px #07090c4b;
+          box-shadow: 10px 10px 20px #07090c4b;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
 }
+
 header .logo img {
   margin-top: 30px;
   max-width: 80px;
 }
+
 header .logo:hover {
   background-color: #d82121;
 }
+
 header .menu {
   margin: 0;
   z-index: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: flex-end;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
   gap: 30px;
 }
+
 header .menu a {
   text-decoration: none;
-  color: rgb(17, 17, 17);
+  color: #111111;
   margin-left: 20px;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-size: large;
   padding: 10px;
 }
+
 header .menu a {
-  background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 0, 0, 0)), linear-gradient(to right, #d82121, #e64e4e, #0e0e0e);
+  background: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0)), to(#ff000000)), -webkit-gradient(linear, left top, right top, from(#d82121), color-stop(#e64e4e), to(#0e0e0e));
+  background: linear-gradient(to right, rgba(255, 255, 255, 0), #ff000000), linear-gradient(to right, #d82121, #e64e4e, #0e0e0e);
   background-size: 100% 3px, 0 3px;
   background-position: 100% 100%, 0 100%;
   background-repeat: no-repeat;
+  -webkit-transition: background-size 400ms;
   transition: background-size 400ms;
 }
+
 header .menu a:hover {
   background-size: 0 3px, 100% 3px;
 }
 
 main {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   height: 100vh;
 }
+
 main .main-left {
   padding: 40px;
   padding-left: 10%;
   margin-right: 40px;
 }
+
 main .main-left h1 {
   font-size: 250px;
-  color: rgb(0, 0, 0);
-  font-family: Georgia, "Times New Roman", Times, serif;
+  color: black;
+  font-family: Georgia, 'Times New Roman', Times, serif;
   font-weight: 400;
 }
+
 main .main-left img.how-much {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   position: absolute;
   bottom: 30px;
   margin-left: -8%;
-  filter: invert(100%);
+  -webkit-filter: invert(100%);
+          filter: invert(100%);
 }
+
 main .main-right {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
+
 main .main-right img.think {
   max-width: 700px;
   bottom: 0;
   position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   right: 0;
-}/*# sourceMappingURL=designer.css.map */
+}
+/*# sourceMappingURL=designer.css.map */

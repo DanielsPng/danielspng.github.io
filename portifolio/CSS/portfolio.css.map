@@ -1,1 +1,9 @@
-{"version":3,"sources":[],"names":[],"mappings":"","file":"portfolio.css"}
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "portfolio.scss"
+    ],
+    "names": [],
+    "file": "portfolio.css"
+}
