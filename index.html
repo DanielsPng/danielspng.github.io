@@ -5,29 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
-    <link rel="stylesheet" href="css/style.css" />
-    <title>DANIEL'S</title>
+    <link rel="stylesheet" href="./assets/styles/main.css" />
+    <title>Daniel's</title>
   </head>
-  <body>
-    <header>
-      <nav>
-        <div class="logo"><img src="./assets/icons/Daniel’s.png" alt="" /></div>
-        <div class="mobile-menu">
-          <div class="line1"></div>
-          <div class="line2"></div>
-          <div class="line3"></div>
-        </div>
-        <ul class="nav-list">
-          <li><a href="#">Início</a></li>
-          <li><a href="#">Sobre</a></li>
-          <li><a href="#">Projetos</a></li>
-          <li><a href="#">Contato</a></li>
-        </ul>
-      </nav>
-    </header>
-    
+  <body>    
     <main>
-        
+      <header-component></header-component>
       <span class="circle"></span>
       <span class="circle2"></span>
       <div class="main-left">
@@ -42,23 +25,15 @@
             inventore incidunt repudiandae temporibus quam praesentium accusamus. <br>
             Molestias dolor ab iste. Lorem ipsum dolor sit amet consectetur,
           </p>
-          
-          <a href="./portifolio/portfolio.html"><button>Checar</button></a> 
+          <a href="./portfolio/design/"><button>Checar</button></a> 
         </div>
-        
-        
       </div>
       <div class="main-right">
         <img class="think" src="./assets/images/statue2.png" alt="" />
       </div>
     </main>
 
-<!------  SEGUNDA PARTE -->
-
     <sub-main>
-      <!-- <div class="main-left-2">
-        <img class="think" src="./assets/images/new-statue.png" alt="" />
-      </div> --->
       <div class="main-right-2">
         <div class="text2">
           <h1 class="title">Designer & Developer</h1>
@@ -68,48 +43,45 @@
             atque ipsa <br> dignissimos minima itaque. 
           </p>
 
-        </div> 
+        </div>
         <div class="container-job">
           <ul>
             <div class="tilt">
-              <li><img class="foto" src="assets/images/mano rio.jpg" alt=""> 
-              <p>Ilustrações</p>
-            </li>
+              <li>
+                <img class="foto" src="assets/images/mano rio.jpg" alt=""> 
+                <p>Ilustrações</p>
+              </li>
             </div>
-            
-            <li><img class="musica" src="assets/images/mano rio.jpg" alt=""> 
-            <p>Desenvolvimento</p>
-          </li>
-          <div>
-            <li><img class="foto" src="assets/images/mano rio.jpg" alt=""> 
-              <p>Photoshop</p>
+            <li>
+              <img class="musica" src="assets/images/mano rio.jpg" alt=""> 
+              <p>Desenvolvimento</p>
             </li>
-          </div>
-            
+            <div>
+              <li><img class="foto" src="assets/images/mano rio.jpg" alt=""> 
+                <p>Photoshop</p>
+              </li>
+            </div>
           </ul>
         </div>
       </div>
     </sub-main>
+
     <div class="developer">
-      
-      
       <div class="glass">
         <h1>Developer</h1>
         <a href=""><button>Checar</button></a> 
       </div>
-     
     </div>
     <div class="designer"> 
       <div class="glass">
         <h1>Designer</h1>
-        <a href="./portifolio/Designer/designer.html"><button>Checar</button></a> 
+        <a href="./portfolio/design/"><button>Checar</button></a> 
       </div>
-     
-    </div>
-    
-    
+    </div>    
   </div>
 
-  <script src="mobile-menu.js"></script>
+  <script src="components/header/index.js" type="text/javascript" defer></script>
+  <script src="assets/js/mobile-menu.js"></script>
+
   </body>
 </html>
