@@ -7,7 +7,7 @@ class Header extends HTMLElement {
     this.innerHTML = `
         <header>
             <nav>
-                <div class="logo"><img src="assets/images/icons/Daniel’s.png" alt="" /></div>
+                <a href="/" class="logo"><img src="assets/images/icons/Daniel’s.png" alt="" /></a>
                 <div class="mobile-menu">
                     <div class="line1"></div>
                     <div class="line2"></div>
@@ -33,6 +33,7 @@ class MobileNavbar {
     this.navList = document.querySelector(navList);
     this.navLinks = document.querySelectorAll(navLinks);
     this.activeClass = "active";
+    this.body = document.body;
 
     this.handleClick = this.handleClick.bind(this);
   }
@@ -51,6 +52,7 @@ class MobileNavbar {
     this.navList.classList.toggle(this.activeClass);
     this.mobileMenu.classList.toggle(this.activeClass);
     this.animateLinks();
+    this.body.classList.toggle(this.activeClass);
   }
 
   addClickEvent() {

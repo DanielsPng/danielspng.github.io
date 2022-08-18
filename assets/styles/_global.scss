@@ -31,6 +31,11 @@ body {
   &::-webkit-scrollbar-thumb:hover {
     background: var(--gold-light);
   }
+
+  &.active {
+    overflow: hidden;
+    height: calc(100vh - 1rem);
+  }
 }
 
 main { 
@@ -38,8 +43,8 @@ main {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-
-  height: auto;
+  
+  padding: 0 1rem;
 }
 
 .presentation {
@@ -75,7 +80,7 @@ main {
     max-width: 100vh;
 
     border-radius: 50%;
-    animation: planetGlowing 10s infinite alternate;
+    transition: var(--transition-default);
 
     > img {
       width: 100%;
@@ -93,8 +98,32 @@ main {
       width: 50vw;
     }
 
+    @media (max-width: 1440px) and (min-width: 900px) and (max-height: 900px) {
+      bottom: -35%;
+      width: 45vw;
+    }
+
+    @media (max-width: 1440px) and (max-height: 750px) {
+      bottom: -35%;
+      width: 35vw;
+    }
+
+    @media (min-width: 900px) {
+      animation: planetGlowing 10s infinite alternate;
+    }
+
     @media (max-width: 900px) {
       width: 62.5vh;
+      box-shadow:
+        0 0 20px 50px #FFFFFF25,
+        0 0 60px 100px #FBF5B750,
+        0 0 100px 200px #BF953F50,
+        0 0 140px 300px #AA771C50;
+      transform: translateY(-50px);
+      
+      > img {
+        mask-image: linear-gradient(rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 50%, rgba(0, 0, 0, 0) 100%);
+      }
     }
   }
 
@@ -145,34 +174,140 @@ main {
   }
 }
 
-.skills {
-  display: flex;
-  flex-direction: column;
+.about-me {
+  display: grid;
+  grid-template-columns: 50fr 50fr;
   align-items: center;
-  justify-content: center;
 
-  padding-top: 30vh;
+  width: 100%;
+  max-width: 1200px;
 
-  > span {
-    color: var(--gold);
-    font-size: 3rem;
-    font-family: 'Times New Roman', Times, serif;
-    font-weight: 400;
-    line-height: 80%;
-    text-align: center;
+  padding: 30vh 0 10vh;
 
+  > img {
+    display: block;
     width: 100%;
+    max-width: 400px;
+    margin: auto;
+
+    pointer-events: none;
+    user-select: none;
+
+    mask-image: linear-gradient(rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 50%, rgba(0, 0, 0, 0) 100%);
   }
 
-  > p {
+  > div {
+    display: flex;
+    flex-direction: column;
 
-    > span:hover {
-      color: rgb(218, 182, 91);
+    justify-content: center;
+    align-items: flex-start;
+    gap: 1rem;
+
+    text-align: justify;
+    text-align-last: left;
+
+    > span {
+      color: var(--gold);
+      font-size: 3rem;
+      font-family: 'Times New Roman', Times, serif;
+      font-weight: 400;
+      line-height: 80%;
+      text-align: center;
+  
+      width: 100%;
+
+      @media (max-width: 900px) {
+        text-align: center;
+        text-align-last: center;
+      }
+    }
+  
+    > p {
+      width: 100%;
+      
+      > span {
+        color: var(--gold);
+      }
+
+      > i {
+        font-style: normal;
+      }
+
+      @media (max-width: 900px) {
+        &:last-child {
+          text-align: center;
+        }
+      }
+    }
+
+    .socials {
+      display: flex;
+      
+      width: 100%;
+      gap: 1rem;
+
+      > a {
+        width: 100%;
+        max-width: 2rem;
+        height: 100%;
+        max-height: 2rem;
+  
+        border-radius: 50%;
+  
+        > svg {
+          padding: .25rem;
+          fill: var(--gold);
+          transition: var(--transition-default);
+        }
+
+        &:hover {
+          > svg {
+            fill: var(--white);
+          }
+        }
+      }
+
+      @media (max-width: 900px) {
+        justify-content: center;
+        align-items: center;
+      }
+    }
+
+    @media (max-width: 900px) and (min-width: 500px) {
+      align-items: center;
+
+      text-align: justify;
+      text-align-last: center;
+
+      max-width: 500px;
     }
   }
 
   @media (min-width: 1440px) {
-    padding-top: 50vh;
+    padding: 50vh 0 10vh;
+  }
+
+  @media (max-width: 900px) {
+    padding: 25vh 0;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    > img {
+      display: none;
+    }
+  }
+
+  @media (max-width: 500px) {
+    > div {
+      > span {
+        font-size: 2rem;
+      }
+    }
   }
 }
 
