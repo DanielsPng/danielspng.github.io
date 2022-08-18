@@ -55,6 +55,7 @@ main {
   position: relative;
   width: 100vw;
   height: calc(100vh - 80px);
+  mask-image: linear-gradient(rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 50%, rgba(0, 0, 0, 0) 100%);
 
   // overflow: hidden;
 
@@ -81,6 +82,7 @@ main {
 
     border-radius: 50%;
     transition: var(--transition-default);
+    
 
     > img {
       width: 100%;
