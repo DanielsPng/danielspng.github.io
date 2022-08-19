@@ -77,9 +77,11 @@ main {
     line-height: 80%;
 
     animation: presentationText 3s ease;
+
+    z-index: 1;
   }
 
-  .bg {
+  .planet {
     position: absolute;
     bottom: -45%;
     width: 45vw;
@@ -87,6 +89,8 @@ main {
 
     border-radius: 50%;
     transition: var(--transition-default);
+
+    z-index: 1;
 
     > img {
       width: 100%;
@@ -131,6 +135,27 @@ main {
       //   mask-image: linear-gradient(rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 50%, rgba(0, 0, 0, 0) 100%);
       // }
     }
+  }
+ 
+  .bg{
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: -80px;
+    left: 0;
+    overflow: hidden;
+
+    z-index: 0;
+
+    >img{
+      opacity: .15;
+      filter: grayscale(1);
+      
+      pointer-events: none;
+      user-select: none;
+      mask-image: linear-gradient(to top, #00000000 0%,#000000 75%, #00000000)
+    }
+
   }
 
   @media (min-width: 900px) {
