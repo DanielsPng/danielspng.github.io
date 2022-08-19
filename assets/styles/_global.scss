@@ -1,0 +1,752 @@
+body {
+  background: var(--gradient-radial-gray-black), var(--black);
+  background-repeat: no-repeat;
+  overflow-x: hidden;
+
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  color: var(--white);
+
+  @media (max-width: 900px) {
+    border: .15rem solid var(--white);
+    border-radius: 1rem;
+    margin: .5rem;
+  }
+
+  /* width */
+  &::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  /* track */
+  &::-webkit-scrollbar-track {
+    background: var(--black);
+  }
+
+  /* handle */
+  &::-webkit-scrollbar-thumb {
+    background: var(--gold);
+  }
+
+  /* handle on hover */
+  &::-webkit-scrollbar-thumb:hover {
+    background: var(--gold-light);
+  }
+
+  &.active {
+    overflow: hidden;
+    height: calc(100vh - 1rem);
+  }
+}
+
+main { 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  
+  padding: 0 1rem;
+  overflow-x: hidden;
+
+  > div:last-child {
+    padding-bottom: 10vh;
+  }
+}
+
+.presentation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: relative;
+  width: 100vw;
+  height: calc(100vh - 80px);
+
+  overflow-y: visible;
+  mask-image: linear-gradient(to top, #00000000 0%, #000000 50%, #000000 75%, #00000000);
+
+  > h1 {
+    position: absolute;
+    top: 15%;
+
+    color: var(--white);
+    text-align: center;
+    font-size: calc(2.5em + 3vw);
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 400;
+
+    line-height: 80%;
+
+    animation: presentationText 3s ease;
+  }
+
+  .bg {
+    position: absolute;
+    bottom: -45%;
+    width: 45vw;
+    max-width: 100vh;
+
+    border-radius: 50%;
+    transition: var(--transition-default);
+
+    > img {
+      width: 100%;
+      // filter: drop-shadow(0 0 0.75rem var(--black));
+  
+      pointer-events: none;
+      user-select: none;
+      
+      clip-path: circle(50% at 50% 50%);
+      transform: scale(1.1);
+    }
+
+    @media (max-width: 1440px) {
+      bottom: -25%;
+      width: 50vw;
+    }
+
+    @media (max-width: 1440px) and (min-width: 900px) and (max-height: 900px) {
+      bottom: -35%;
+      width: 45vw;
+    }
+
+    @media (max-width: 1440px) and (max-height: 750px) {
+      bottom: -35%;
+      width: 35vw;
+    }
+
+    @media (min-width: 900px) {
+      animation: planetGlowing 10s infinite alternate;
+    }
+
+    @media (max-width: 900px) {
+      width: 62.5vh;
+      box-shadow:
+        0 0 20px 50px #FFFFFF25,
+        0 0 60px 100px #FBF5B750,
+        0 0 100px 200px #BF953F50,
+        0 0 140px 300px #AA771C50;
+      transform: translateY(-50px);
+      
+      // > img {
+      //   mask-image: linear-gradient(rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 50%, rgba(0, 0, 0, 0) 100%);
+      // }
+    }
+  }
+
+  @media (min-width: 900px) {
+    @keyframes presentationText {
+      0% {
+        opacity: 0;
+        top: 40%;
+      }
+      100% {
+        opacity: 1;
+        top: 15%;
+      }
+    }
+  }
+
+  @media (max-width: 900px) {
+    @keyframes presentationText {
+      0% {
+        opacity: 0;
+        top: 50%;
+      }
+      50% {
+        opacity: 1;
+        top: 10%;
+      }
+      100% {
+        top: 15%;
+      }
+    }
+  }
+
+  @keyframes planetGlowing {
+    0% {
+      filter: brightness(25%) saturate(50%) invert(5%);
+      box-shadow: unset;
+      transform: translateY(0);
+    }
+    100% {
+      box-shadow:
+        0 0 20px 50px #FFFFFF25,
+        0 0 60px 100px #FBF5B750,
+        0 0 100px 200px #BF953F50,
+        0 0 140px 300px #AA771C50;
+      filter: unset;
+      transform: translateY(-50px);
+    }
+  }
+}
+
+.about-me {
+  display: grid;
+  grid-template-columns: 50fr 50fr;
+  align-items: center;
+
+  width: 100%;
+  max-width: 1200px;
+
+  padding: 30vh 0 10vh;
+
+  > img {
+    display: block;
+    width: 100%;
+    max-width: 400px;
+    margin: auto;
+
+    pointer-events: none;
+    user-select: none;
+
+    mask-image: linear-gradient(rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 50%, rgba(0, 0, 0, 0) 100%);
+  }
+
+  > div {
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: flex-start;
+    gap: 1rem;
+
+    text-align: justify;
+    text-align-last: left;
+
+    > span {
+      color: var(--gold);
+      font-size: 3rem;
+      font-family: 'Times New Roman', Times, serif;
+      font-weight: 400;
+      line-height: 80%;
+      text-align: center;
+  
+      width: 100%;
+
+      @media (max-width: 900px) {
+        text-align: center;
+        text-align-last: center;
+      }
+    }
+  
+    > p {
+      width: 100%;
+      
+      > span {
+        color: var(--gold);
+      }
+
+      > i {
+        font-style: normal;
+      }
+
+      @media (max-width: 900px) {
+          &#contact-with-me {
+            text-align: center;
+            text-align-last: center;
+          }
+        }
+    }
+  }
+
+  .socials {
+    display: flex;
+    
+    width: 100%;
+    gap: 1rem;
+
+    > a {
+      width: 100%;
+      max-width: 2rem;
+      height: 100%;
+      max-height: 2rem;
+
+      border-radius: 50%;
+
+      > svg {
+        padding: .25rem;
+        fill: var(--gold);
+        transition: var(--transition-default);
+      }
+
+      &:hover {
+        > svg {
+          fill: var(--white);
+        }
+      }
+    }
+
+    @media (max-width: 900px) {
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  @media (max-width: 900px) and (min-width: 500px) {
+    align-items: center;
+
+    text-align: justify;
+    text-align-last: center;
+
+    max-width: 500px;
+  }
+
+  @media (min-width: 1440px) {
+    padding-top: 25vh;
+  }
+
+  @media (max-width: 900px) {
+    padding-top: 15vh;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    > img {
+      display: none;
+    }
+  }
+
+  @media (max-width: 500px) {
+    > div {
+      > span {
+        font-size: 2rem;
+      }
+    }
+  }
+}
+
+.my-works {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  max-width: 1200px;
+
+  gap: 5rem;
+
+  > span {
+    color: var(--gold);
+    font-size: 3rem;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 400;
+    line-height: 80%;
+    text-align: center;
+
+    width: 100%;
+
+    @media (max-width: 900px) {
+      text-align: center;
+      text-align-last: center;
+    }
+
+    @media (max-width: 500px) {
+      font-size: 2rem;
+      max-width: 90%;
+    }
+  }
+
+  > section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+
+    gap: 5vw;
+    width: 100%;
+
+    > li {
+      display: flex;
+      flex-basis: 300px;
+      
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+  
+      border-radius: 1rem;
+      overflow: hidden;
+  
+      > img {
+        width: 100%;
+        height: 300px;
+  
+        position: relative;
+
+        object-fit: cover;
+        pointer-events: none;
+        user-select: none;
+        transition: var(--transition-default);
+
+        mask-image: linear-gradient(to top, #00000050, black);
+  
+        transform-origin: top;
+        filter: grayscale(1);
+  
+        // @media (max-width: 900px) {
+        //   height: auto;
+        // }
+      }
+  
+      .info {
+        display: flex;
+        justify-content:center;
+        align-items: center;
+  
+        width: 100%;
+        height: 50px;
+  
+        background: var(--gold);
+        transition: var(--transition-default);
+        z-index: 2;
+  
+        > p {
+          font-weight: bold;
+        }
+      }
+  
+      @media (min-width: 900px) {
+        &:hover {
+          > img {
+            transform: scale(1.05);
+            // max-height: unset;
+    
+            filter: grayscale(0) brightness(125%);
+          }
+        }
+      }
+  
+      @media (max-width: 900px) {
+        flex-basis: 250px;
+      }
+    }
+  }
+}
+
+sub-main {
+  z-index: -1;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  box-shadow: rgb(0, 0, 0) 0px 20px 30px -10px;
+
+  .main-right-2{
+    background-image: url(/assets/images/new-statue.png);
+    text-align: center;
+    background-repeat: no-repeat;
+    background-size: 400px;
+    padding: 40px ;
+    text-align: end;
+    height: 100vh;
+   
+    .text2{
+      h1{
+        font-size: calc(3em + 3vw);
+        color: #dab65b;
+        font-family: 'Times New Roman', Times, serif;
+        font-weight: 400;
+        line-height: 80%;
+      }
+      p{
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-size: 20px;
+        text-decoration: none;
+        color: white;
+        margin-bottom: 15px;
+        font-weight: 300;
+        cursor: default;
+  
+        span{
+          font-weight: 400;
+          font-size: 23px;
+          transition: all .4s ease-in-out;
+        }
+        span:hover{
+          color: rgb(218, 182, 91);
+          
+        }
+      }
+    }
+   
+   
+   
+
+    .container-job{
+      display: flex;
+      text-align: center;
+      gap: 16px;
+      z-index: -2;
+      
+      
+      
+      ul{
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        padding: 0;
+        width: 720px; 
+  
+      p{
+        z-index: 0;
+        padding: 10px;
+        background-color: #BF953F;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        border-bottom-right-radius: 10px;
+        border-bottom-left-radius: 10px;
+      }
+
+      img{
+        z-index: 1;
+        width: 100%;
+        box-shadow: rgba(0, 0, 0, 0.911) 0px 5px 15px;
+      }
+      
+
+      li{
+      margin: 0 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    
+      }
+      }
+  
+      
+    }
+  }
+
+ 
+   
+  
+  .main-left-2{
+    display: flex;
+    flex-direction: column;
+     
+      img.think{
+        max-width: 480px;
+       
+      }
+    }
+  
+
+
+  .circle{
+    position: absolute;
+    top: 0;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    background-color: rgb(236, 236, 236);
+    clip-path: circle(400px at right 500px);
+    display: inline-block;
+    z-index: -2;
+  }   
+}
+
+.developer {
+  z-index: -1;
+  background-image: url(/assets/images/face-statue.png);
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: 500px;
+  display: flex;
+  height: 100vh;
+  box-shadow: rgb(0, 0, 0) 0px 20px 30px -10px;
+
+
+  .glass{
+    z-index: 0;
+    position: absolute;
+    height: 100%;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 48%;
+    background: rgba(255, 255, 255, 0);
+    border-bottom-left-radius: 20px;
+    border-top-left-radius: 20px;
+    box-shadow: 0 4px 30px rgb(0, 0, 0);
+    backdrop-filter: blur(9px);
+  -webkit-backdrop-filter: blur(9px);
+
+    h1{
+      font-size: calc(2em + 3vw);
+      color: rgb(255, 255, 255);
+      font-family: 'Times New Roman', Times, serif;
+      font-weight: 400;
+      text-align: center;
+      padding-bottom: 10px;
+ 
+    }
+
+    button{
+      align-items: center;
+      padding: 6px 35px;
+      border: 1px solid rgb(218, 182, 91); 
+      color: white;
+      background-color: transparent;
+      border-radius: 4px;
+      transition: all .4s ease-in-out;
+      position: relative;
+      cursor: pointer;
+      outline: none;
+      border-image: 1px solid linear-gradient(to right, #BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C, #BF953F);
+      background-size: 400%;
+      font-size: 20px;
+      font-weight: 350;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+    } 
+    button:hover{
+      color: #0f0f0f;
+      background: #e6c27a;
+    }
+    
+  }
+ 
+}
+
+.designer {
+  z-index: -1;
+  background-image: url(/assets/images/metal-statue.png);
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: 100vh;
+  display: flex;
+  height: 100vh;
+  box-shadow: rgb(0, 0, 0) 0px 20px 30px -10px;
+
+
+  .glass{
+    z-index: 0;
+    position: absolute;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 48%;
+    background: rgba(255, 255, 255, 0);
+    border-bottom-right-radius: 20px;
+    border-top-right-radius: 20px;
+    box-shadow: 0 4px 30px rgb(0, 0, 0);
+    backdrop-filter: blur(9px);
+  -webkit-backdrop-filter: blur(9px);
+
+    h1{
+      font-size: calc(2em + 3vw);
+      color: rgb(255, 255, 255);
+      font-family: 'Times New Roman', Times, serif;
+      font-weight: 400;
+      text-align: center;
+      padding-bottom: 10px;
+ 
+    }
+
+    button{
+      align-items: center;
+      padding: 6px 35px;
+      border: 1px solid rgb(218, 182, 91); 
+      color: white;
+      background-color: transparent;
+      border-radius: 4px;
+      transition: all .4s ease-in-out;
+      position: relative;
+      cursor: pointer;
+      outline: none;
+      border-image: 1px solid linear-gradient(to right, #BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C, #BF953F);
+      background-size: 400%;
+      font-size: 20px;
+      font-weight: 350;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+    } 
+    button:hover{
+      color: #0f0f0f;
+      background: #e6c27a;
+    }
+    
+  }
+
+ 
+}
+
+footer {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 60vh;
+  background-image: url(/assets/images/white-background-2.jpg);
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: 900px;
+  background-color: #07090C;  
+  
+  .menu{
+    text-align: center;
+    padding: 50px;
+    background-color: #B38728;
+    margin-left: 10%;
+    margin-right: 10%;
+    border-radius: 10px;
+    width: 80%;
+    box-shadow: 10px 10px 20px #000000cb;
+
+    .links{
+      padding: 20px;
+      margin-bottom: 10px;
+      a{
+        padding: 50px;
+      
+        font-size: 20px;
+        transition: .4s;
+      }
+      a:hover{
+        color: #07090C;
+      }
+    }
+    
+    a{
+      
+      text-decoration: none;
+      color: #ffffff;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+     
+     
+      img{
+        transition: .4s;
+        filter: invert(100%);
+        width: 50px;
+        margin-left: 20px;
+        
+      }
+      img:hover{
+        box-shadow: 10px 10px 20px #080808;
+        filter: invert(0%);
+        border-radius: 20%;
+        transform: rotate(10deg);
+      }
+    }
+  
+
+  }
+}
+
+@keyframes buttonGlow {
+  0% {
+    background-position: 0%;
+  }
+  100% {
+    background-position: 400%;
+  }
+}
