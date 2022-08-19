@@ -570,6 +570,11 @@ main > div:last-child {
     filter: grayscale(0) brightness(125%);
   }
 }
+@media (max-width: 500px) {
+  .my-works > section > li > img {
+    filter: grayscale(0) brightness(125%);
+  }
+}
 @media (max-width: 900px) {
   .my-works > section > li {
     flex-basis: 250px;

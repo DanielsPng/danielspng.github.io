@@ -371,6 +371,7 @@ main {
     @media (max-width: 500px) {
       font-size: 2rem;
       max-width: 90%;
+      
     }
   }
 
@@ -440,6 +441,12 @@ main {
     
             filter: grayscale(0) brightness(125%);
           }
+        }
+      }
+
+      @media (max-width: 500px) {
+        > img {  
+          filter: grayscale(0) brightness(125%);
         }
       }
   
