@@ -281,6 +281,7 @@ main > div:last-child {
 .presentation .bg > img {
   opacity: 0.1;
   filter: grayscale(1);
+  width: 100%;
   pointer-events: none;
   -webkit-user-select: none;
      -moz-user-select: none;
@@ -288,6 +289,11 @@ main > div:last-child {
           user-select: none;
   -webkit-mask-image: linear-gradient(to top, rgba(0, 0, 0, 0) 0%, #000000 75%, rgba(0, 0, 0, 0) 100%);
           mask-image: linear-gradient(to top, rgba(0, 0, 0, 0) 0%, #000000 75%, rgba(0, 0, 0, 0) 100%);
+}
+@media (max-width: 900px) {
+  .presentation .bg > img {
+    width: auto;
+  }
 }
 @media (min-width: 900px) {
   @-webkit-keyframes presentationText {

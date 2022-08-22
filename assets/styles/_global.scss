@@ -148,11 +148,18 @@ main {
     >img{
       opacity: .1;
       filter: grayscale(1);
-      
+      width: 100%;
       pointer-events: none;
       user-select: none;
       mask-image: linear-gradient(to top, #00000000 0%,#000000 75%, #00000000 100%)
     }
+
+    @media (max-width: 900px) {
+      >img{
+        width: auto;
+      }
+    }
+
 
   }
 
