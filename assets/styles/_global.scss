@@ -347,6 +347,11 @@ main {
       }
     }
   }
+
+  #svg{
+    z-index: -1;
+  }
+
 }
 
 .my-works {
@@ -462,35 +467,17 @@ main {
       }
     }
   }
-  .custom-shape-divider-bottom-1661436984 {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    overflow: hidden;
-    line-height: 0;
-}
-
-.custom-shape-divider-bottom-1661436984 svg {
-  width: 100%;
-    position: relative;
-    display: block;
-    width: calc(108% + 1.3px);
-    height: 201px;
-}
-
-.custom-shape-divider-bottom-1661436984 .shape-fill {
-    fill: #FFFFFF;
-}
+  
 }
 
 
 
 .developer {
   z-index: -1;
+  background-color: #000000;
   background-image: url(/assets/images/face-statue.png);
   background-repeat: no-repeat;
-  background-position: center bottom;
+  background-position: 46% bottom;
   background-size: 500px;
   display: flex;
   height: 100vh;
@@ -506,10 +493,8 @@ main {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 48%;
+    width: 50%;
     background: rgba(255, 255, 255, 0);
-    border-bottom-left-radius: 20px;
-    border-top-left-radius: 20px;
     box-shadow: 0 4px 30px rgb(0, 0, 0);
     backdrop-filter: blur(9px);
   -webkit-backdrop-filter: blur(9px);
@@ -556,7 +541,7 @@ main {
   background-image: url(/assets/images/metal-statue.png);
   background-repeat: no-repeat;
   background-position: center bottom;
-  background-size: 100vh;
+  background-size: 90vh;
   display: flex;
   height: 100vh;
   box-shadow: rgb(0, 0, 0) 0px 20px 30px -10px;
@@ -570,7 +555,7 @@ main {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 48%;
+    width: 50%;
     background: rgba(255, 255, 255, 0);
     border-bottom-right-radius: 20px;
     border-top-right-radius: 20px;
