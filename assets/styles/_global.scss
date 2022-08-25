@@ -462,6 +462,26 @@ main {
       }
     }
   }
+  .custom-shape-divider-bottom-1661436984 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.custom-shape-divider-bottom-1661436984 svg {
+  width: 100%;
+    position: relative;
+    display: block;
+    width: calc(108% + 1.3px);
+    height: 201px;
+}
+
+.custom-shape-divider-bottom-1661436984 .shape-fill {
+    fill: #FFFFFF;
+}
 }
 
 
