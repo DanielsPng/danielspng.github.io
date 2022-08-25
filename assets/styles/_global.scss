@@ -477,7 +477,7 @@ main {
   background-color: #000000;
   background-image: url(/assets/images/face-statue.png);
   background-repeat: no-repeat;
-  background-position: 46% bottom;
+  background-position: 46% ;
   background-size: 500px;
   display: flex;
   height: 100vh;
@@ -536,6 +536,12 @@ main {
  
 }
 
+.melts{
+  z-index: -1;
+  display: flex;
+  position: absolute;
+}
+
 .designer {
   z-index: -1;
   background-image: url(/assets/images/metal-statue.png);
@@ -556,12 +562,13 @@ main {
     align-items: center;
     justify-content: center;
     width: 50%;
+    
     background: rgba(255, 255, 255, 0);
     border-bottom-right-radius: 20px;
     border-top-right-radius: 20px;
     box-shadow: 0 4px 30px rgb(0, 0, 0);
     backdrop-filter: blur(9px);
-  -webkit-backdrop-filter: blur(9px);
+    -webkit-backdrop-filter: blur(9px);
 
     h1{
       font-size: calc(2em + 3vw);
@@ -601,16 +608,13 @@ main {
  
 }
 
+
 footer {
   justify-content: center;
   align-items: center;
   display: flex;
   flex-direction: column;
   height: 60vh;
-  background-image: url(/assets/images/white-background-2.jpg);
-  background-repeat: no-repeat;
-  background-position: center bottom;
-  background-size: 900px;
   background-color: #07090C;  
   
   .menu{
