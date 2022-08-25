@@ -592,14 +592,13 @@ main > div:last-child {
 
 .developer {
   z-index: -1;
-  background-color: #000000;
-  background-image: url(/assets/images/half-head.png);
+  background-color: #3a321f;
+  background-image: url(/assets/images/face-statue.png);
   background-repeat: no-repeat;
-  background-position: 46%;
+  background-position: 46% bottom;
   background-size: 500px;
   display: flex;
   height: 100vh;
-  box-shadow: rgb(0, 0, 0) 0px 20px 30px -10px;
 }
 .developer .glass {
   z-index: 0;
@@ -654,7 +653,7 @@ main > div:last-child {
 }
 
 .designer {
-  z-index: -1;
+  z-index: -2;
   background-image: url(/assets/images/metal-statue.png);
   background-repeat: no-repeat;
   background-position: center bottom;
@@ -672,9 +671,8 @@ main > div:last-child {
   align-items: center;
   justify-content: center;
   width: 50%;
+  box-shadow: 0 4px 30px rgb(0, 0, 0);
   background: rgba(255, 255, 255, 0);
-  border-bottom-right-radius: 20px;
-  border-top-right-radius: 20px;
   backdrop-filter: blur(9px);
   -webkit-backdrop-filter: blur(9px);
 }
