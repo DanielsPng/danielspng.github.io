@@ -675,7 +675,6 @@ main > div:last-child {
   background: rgba(255, 255, 255, 0);
   border-bottom-right-radius: 20px;
   border-top-right-radius: 20px;
-  box-shadow: 0 4px 30px rgb(0, 0, 0);
   backdrop-filter: blur(9px);
   -webkit-backdrop-filter: blur(9px);
 }
@@ -711,12 +710,31 @@ main > div:last-child {
 }
 
 footer {
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   display: flex;
-  flex-direction: column;
-  height: 60vh;
-  background-color: #07090C;
+  flex-direction: row;
+  height: 40vh;
+  background: linear-gradient(90deg, hsl(0deg, 0%, 0%) 0%, hsl(46deg, 45%, 26%) 53%, hsl(46deg, 43%, 33%) 59%, hsl(45deg, 43%, 39%) 66%, hsl(44deg, 42%, 46%) 73%, hsl(44deg, 47%, 53%) 81%, hsl(43deg, 63%, 61%) 100%);
+  overflow: hidden;
+  padding: 80px;
+}
+footer p {
+  padding-left: 20%;
+  z-index: 1;
+}
+footer .davi-statue {
+  z-index: 0;
+  width: 500px;
+  right: 0;
+  opacity: 0.3;
+  -webkit-mask-image: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, #000000 50%, #000000 100%);
+          mask-image: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, #000000 50%, #000000 100%);
+}
+@media (max-width: 900px) {
+  footer .davi-statue {
+    width: 300px;
+  }
 }
 footer .menu {
   text-align: center;
@@ -744,18 +762,6 @@ footer .menu a {
   text-decoration: none;
   color: #ffffff;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-}
-footer .menu a img {
-  transition: 0.4s;
-  filter: invert(100%);
-  width: 50px;
-  margin-left: 20px;
-}
-footer .menu a img:hover {
-  box-shadow: 10px 10px 20px #080808;
-  filter: invert(0%);
-  border-radius: 20%;
-  transform: rotate(10deg);
 }
 
 @-webkit-keyframes buttonGlow {
