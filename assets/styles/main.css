@@ -593,9 +593,9 @@ main > div:last-child {
 .developer {
   z-index: -1;
   background-color: #000000;
-  background-image: url(/assets/images/face-statue.png);
+  background-image: url(/assets/images/half-head.png);
   background-repeat: no-repeat;
-  background-position: 46% bottom;
+  background-position: 46%;
   background-size: 500px;
   display: flex;
   height: 100vh;
