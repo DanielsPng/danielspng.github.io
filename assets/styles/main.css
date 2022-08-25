@@ -595,7 +595,7 @@ main > div:last-child {
   background-color: #000000;
   background-image: url(/assets/images/face-statue.png);
   background-repeat: no-repeat;
-  background-position: 46%;
+  background-position: 46% bottom;
   background-size: 500px;
   display: flex;
   height: 100vh;
