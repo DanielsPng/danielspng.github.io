@@ -592,7 +592,6 @@ main > div:last-child {
 
 .developer {
   z-index: -1;
-  background-color: #3a321f;
   background-image: url(/assets/images/face-statue.png);
   background-repeat: no-repeat;
   background-position: 46% bottom;
