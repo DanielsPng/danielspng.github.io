@@ -607,10 +607,10 @@ main {
 
 
 footer {
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   height: 40vh;
   background: linear-gradient(
     90deg,
@@ -626,15 +626,57 @@ footer {
   padding: 80px;
 
   p{
-    padding-left: 20%;
     z-index: 1;
+    position: absolute;
+    text-align: center;
+  }
+
+  .socials {
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    margin-top: 100px;
+    
+    width: 100%;
+    gap: 1rem;
+
+    > a {
+      width: 100%;
+      max-width: 2rem;
+      height: 100%;
+      max-height: 2rem;
+
+      border-radius: 50%;
+
+      > svg {
+       
+        padding: .25rem;
+        fill: var(--gold);
+        transition: var(--transition-default);
+      }
+
+      &:hover {
+        > svg {
+          fill: var(--white);
+          padding: .18rem;
+        }
+      }
+    }
+
+    @media (max-width: 900px) {
+      justify-content: center;
+      align-items: center;
+    }
   }
 
   .davi-statue{
-    z-index: -0;
+    z-index: 0;
     width: 500px;
     right: 0;
     opacity: 0.3;
+    margin-left: 50%;
 
     mask-image: linear-gradient(to right, #00000000 0%, #000000 50%, #000000 100%);
   
