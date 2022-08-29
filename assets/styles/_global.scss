@@ -535,13 +535,14 @@ body {
   display: flex;
   height: 100vh;
   box-shadow: 0 4px 30px rgb(0, 0, 0);
+  
 
 
 
   .glass{
     z-index: 0;
     position: absolute;
-    height: 100%;
+    height: 100vh;
     right: 0;
     display: flex;
     flex-direction: column;
@@ -551,7 +552,7 @@ body {
     background: rgba(255, 255, 255, 0);
     box-shadow: 0 4px 30px rgb(0, 0, 0);
     backdrop-filter: blur(9px);
-  -webkit-backdrop-filter: blur(9px);
+    -webkit-backdrop-filter: blur(9px);
 
     h1{
       font-size: calc(2em + 3vw);
@@ -565,11 +566,11 @@ body {
 
     @import url('https://fonts.googleapis.com/css?family=Mukta:700');
 
-@mixin transition($property: all, $duration: 0.45s, $ease: cubic-bezier(0.65,0,.076,1)) {
+  @mixin transition($property: all, $duration: 0.45s, $ease: cubic-bezier(0.65,0,.076,1)) {
   transition: $property $duration $ease;
-}
+  }
 
-button {
+  button {
   position: relative;
   display: inline-block;
   cursor: pointer;
@@ -618,6 +619,7 @@ button {
             transform: rotate(45deg);
           }
         }
+      
       }
     }
     .button-text {
@@ -650,6 +652,8 @@ button {
       color: $white;
     }
   }
+  
+  
 }
 
 @supports (display: grid) {
@@ -691,7 +695,7 @@ button {
   .glass{
     z-index: 0;
     position: absolute;
-    height: 100%;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -868,4 +872,4 @@ footer {
   100% {
     background-position: 400%;
   }
-}
+} 
