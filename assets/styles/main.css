@@ -663,7 +663,7 @@ main > div:last-child {
   -webkit-backdrop-filter: blur(9px);
 }
 .developer .glass h1 {
-  font-size: calc(1.8em + 3vw);
+  font-size: calc(1.5em + 3vw);
   color: rgb(255, 255, 255);
   font-family: "Times New Roman", Times, serif;
   font-weight: 400;
