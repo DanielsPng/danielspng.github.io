@@ -24,7 +24,7 @@ main {
   justify-content: flex-start;
   width: 100%;
   max-width: 45%;
-  font-size: 7rem;
+  font-size: 8rem;
   line-height: 150%;
   z-index: -2;
 }
@@ -46,7 +46,7 @@ main {
   width: 700px;
   max-width: 100vh;
   transition: var(--transition-default);
-  z-index: -1;
+  z-index: 0;
 }
 .spider-img > img {
   width: 110%;

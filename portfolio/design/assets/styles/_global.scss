@@ -28,7 +28,7 @@ main{
     justify-content: flex-start;
     width: 100%;
     max-width: 45%;
-    font-size: 7rem;
+    font-size: 8rem;
     line-height: 150%;
     z-index: -2;
    
@@ -56,7 +56,7 @@ main{
     transition: var(--transition-default);
 
 
-    z-index: -1;
+    z-index: 0;
 
     > img {
       width: 110%;
