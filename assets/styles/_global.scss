@@ -536,7 +536,7 @@ body {
   height: 100vh;
   box-shadow: 0 4px 30px rgb(0, 0, 0);
 
-  @media (max-width: 900px) {
+  @media (max-width: 400px) {
     background-size: 500px;
     background-position: 70% bottom ;
     }
@@ -741,6 +741,7 @@ footer {
     right: 0;
     opacity: 0.3;
     margin-left: 50%;
+    bottom: 0;
 
     mask-image: linear-gradient(to right, #00000000 0%, #000000 50%, #000000 100%);
   

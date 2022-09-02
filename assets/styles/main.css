@@ -641,7 +641,7 @@ main > div:last-child {
   height: 100vh;
   box-shadow: 0 4px 30px rgb(0, 0, 0);
 }
-@media (max-width: 900px) {
+@media (max-width: 400px) {
   .developer {
     background-size: 500px;
     background-position: 70% bottom;
@@ -813,6 +813,7 @@ footer .davi-statue {
   right: 0;
   opacity: 0.3;
   margin-left: 50%;
+  bottom: 0;
   -webkit-mask-image: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, #000000 50%, #000000 100%);
           mask-image: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, #000000 50%, #000000 100%);
 }
