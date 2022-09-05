@@ -27,14 +27,15 @@ main{
     -webkit-box-pack: center;
     justify-content: flex-start;
     width: 100%;
-    max-width: 45%;
     font-size: 8rem;
     line-height: 150%;
     z-index: -2;
+    height: 100%;
    
     p{
         font-size: 1.25rem;
         line-height: 100%;
+        color: transparent;
     }
 
     @media (max-width: 900px) {
@@ -75,7 +76,6 @@ main{
         mask-image: linear-gradient(to right, transparent, rgb(0, 0, 0));
         overflow: hidden;
         width: 600px;
-        right: -60px;
     }
         
 }

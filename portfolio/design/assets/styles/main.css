@@ -23,14 +23,15 @@ main {
   flex-direction: column;
   justify-content: flex-start;
   width: 100%;
-  max-width: 45%;
   font-size: 8rem;
   line-height: 150%;
   z-index: -2;
+  height: 100%;
 }
 .title p {
   font-size: 1.25rem;
   line-height: 100%;
+  color: transparent;
 }
 @media (max-width: 900px) {
   .title {
@@ -69,7 +70,6 @@ main {
             mask-image: linear-gradient(to right, transparent, rgb(0, 0, 0));
     overflow: hidden;
     width: 600px;
-    right: -60px;
   }
 }
 
@@ -90,14 +90,7 @@ header-component nav {
   width: 100%;
 }
 header-component nav .logo {
-  border-bottom-right-radius: 10px;
-  border-bottom-left-radius: 10px;
-  transition: all 0.4s ease-in-out;
-}
-header-component nav .logo img {
-  max-width: 120px;
-  padding: 10px;
-  cursor: pointer;
+  color: black;
 }
 header-component nav a {
   text-decoration: none;
