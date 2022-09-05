@@ -49,8 +49,8 @@ main {
   width: 700px;
   max-width: 100vh;
   transition: var(--transition-default);
-  -webkit-animation: float 10s ease-in-out infinite;
-          animation: float 10s ease-in-out infinite;
+  -webkit-animation: float 5s cubic-bezier(0.91, -0.03, 0.17, 0.75) infinite;
+          animation: float 5s cubic-bezier(0.91, -0.03, 0.17, 0.75) infinite;
   z-index: 0;
 }
 .spider-img > img {
@@ -77,30 +77,24 @@ main {
 @-webkit-keyframes float {
   0% {
     transform: translatey(0px);
-    transform: translateX(0px);
   }
   50% {
     transform: translatey(-20px);
-    transform: translateX(-20px);
   }
   100% {
     transform: translatey(0px);
-    transform: translateX(0px);
   }
 }
 
 @keyframes float {
   0% {
     transform: translatey(0px);
-    transform: translateX(0px);
   }
   50% {
     transform: translatey(-20px);
-    transform: translateX(-20px);
   }
   100% {
     transform: translatey(0px);
-    transform: translateX(0px);
   }
 }
 header-component {
@@ -128,7 +122,7 @@ header-component nav a {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-size: 20px;
   padding: 0.75rem 1rem;
-  background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 0, 0, 0)), linear-gradient(to right, transparent, #bf3f3f, #bf3f3f, #bf3f3f, transparent);
+  background: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 0, 0, 0)), linear-gradient(#bf3f3f, #bf3f3f, #bf3f3f);
   background-size: 0 1px, 0 0;
   background-position: 50% 100%;
   background-repeat: no-repeat;
@@ -136,7 +130,6 @@ header-component nav a {
 }
 header-component nav a:not(.logo):hover {
   background-size: 0 1px, 100% 1px;
-  box-shadow: inset 0 -8px 5px -6px #bf3f3f;
 }
 header-component nav .nav-list {
   display: flex;
