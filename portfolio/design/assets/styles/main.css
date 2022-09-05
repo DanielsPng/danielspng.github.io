@@ -33,6 +33,9 @@ main {
   line-height: 100%;
 }
 @media (max-width: 900px) {
+  .title {
+    text-align: center;
+  }
   .title h1 {
     font-size: 6rem;
     line-height: 100%;
@@ -116,6 +119,7 @@ header-component nav .nav-list {
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 2;
   list-style: none;
   height: 100%;
 }
