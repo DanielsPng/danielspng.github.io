@@ -51,7 +51,7 @@ main {
   transition: var(--transition-default);
   -webkit-animation: float 5s cubic-bezier(0.91, -0.03, 0.17, 0.75) infinite;
           animation: float 5s cubic-bezier(0.91, -0.03, 0.17, 0.75) infinite;
-  z-index: 0;
+  z-index: 1;
 }
 .spider-img > img {
   width: 110%;
@@ -72,6 +72,19 @@ main {
     overflow: hidden;
     width: 600px;
   }
+}
+
+.presentation {
+  z-index: -1;
+  height: 100vh;
+  width: 100vw;
+  background-color: firebrick;
+}
+.presentation .melts {
+  width: 100%;
+  z-index: 0;
+  display: flex;
+  position: absolute;
 }
 
 @-webkit-keyframes float {
@@ -115,6 +128,9 @@ header-component nav {
 }
 header-component nav .logo {
   color: black;
+  font-family: ui-sans-serif;
+  font-weight: bolder;
+  font-size: 30px;
 }
 header-component nav a {
   text-decoration: none;

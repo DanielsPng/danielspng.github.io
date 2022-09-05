@@ -57,7 +57,7 @@ main{
     animation: float 5s cubic-bezier(0.91, -0.03, 0.17, 0.75) infinite;
 
 
-    z-index: 0;
+    z-index: 1;
 
     > img {
       width: 110%;
@@ -79,6 +79,22 @@ main{
     }
         
 }
+
+
+.presentation{
+    .melts{
+        width: 100%;
+        z-index: 0;
+        display: flex;
+        position: absolute;
+    
+    }
+    z-index: -1;
+    height: 100vh;
+    width: 100vw;
+    background-color: firebrick;
+}
+
 @keyframes float {
 	0% {
 
