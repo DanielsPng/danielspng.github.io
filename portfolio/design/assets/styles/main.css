@@ -26,7 +26,6 @@ main {
   font-size: 8rem;
   line-height: 150%;
   z-index: -2;
-  height: 100%;
 }
 .title p {
   font-size: 1.25rem;
@@ -50,6 +49,8 @@ main {
   width: 700px;
   max-width: 100vh;
   transition: var(--transition-default);
+  -webkit-animation: float 10s ease-in-out infinite;
+          animation: float 10s ease-in-out infinite;
   z-index: 0;
 }
 .spider-img > img {
@@ -73,6 +74,35 @@ main {
   }
 }
 
+@-webkit-keyframes float {
+  0% {
+    transform: translatey(0px);
+    transform: translateX(0px);
+  }
+  50% {
+    transform: translatey(-20px);
+    transform: translateX(-20px);
+  }
+  100% {
+    transform: translatey(0px);
+    transform: translateX(0px);
+  }
+}
+
+@keyframes float {
+  0% {
+    transform: translatey(0px);
+    transform: translateX(0px);
+  }
+  50% {
+    transform: translatey(-20px);
+    transform: translateX(-20px);
+  }
+  100% {
+    transform: translatey(0px);
+    transform: translateX(0px);
+  }
+}
 header-component {
   width: 100%;
 }
