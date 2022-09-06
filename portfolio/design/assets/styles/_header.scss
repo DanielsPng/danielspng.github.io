@@ -22,6 +22,22 @@ header-component {
         font-family: ui-sans-serif;
         font-weight: bolder;
         font-size: 30px;
+        top: 0;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+       display: flex;
+       transition: .2s ease-in-out;
+        
+
+        &:hover{
+          background-color: #bf3f3f;
+         
+          color: white;
+         
+        }
       }
 
       a {
