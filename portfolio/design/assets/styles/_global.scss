@@ -19,7 +19,70 @@ main{
     padding: 0px 1rem;
     overflow: hidden;
 }
-
+.learn-more{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.stripe-button-two {
+    margin-top: 25px;
+    border: 0;
+    outline: 0;
+    background: hsla(0, 67%, 39%, 0.2);
+    border-radius: 50px;
+    color: rgb(0, 0, 0);
+    font-size: 0.875rem;
+    font-weight: 600;
+    padding: 12px 25px;
+    transition-property: background-color, opacity;
+    svg {
+        margin-left: 8px;
+        vertical-align: auto;
+      }
+      .HoverArrow {
+        --arrowSpacing: 5px;
+        --arrowHoverTransition: 150ms cubic-bezier(0.215, 0.61, 0.355, 1);
+        --arrowHoverOffset: translateX(4px);
+        --arrowTipTransform: none;
+        --arrowLineOpacity: 0;
+        position: relative;
+        top: 1px;
+        margin-left: var(--arrowSpacing);
+        stroke-width: 2px;
+        fill: none;
+        stroke: currentColor;
+      }
+      
+      .HoverArrow__linePath {
+        --arrowSpacing: 5px;
+        --arrowHoverTransition: 150ms cubic-bezier(0.215, 0.61, 0.355, 1);
+        --arrowHoverOffset: translateX(4px);
+        --arrowTipTransform: none;
+        --arrowLineOpacity: 0;
+        opacity: var(--arrowLineOpacity);
+        transition: opacity var(--hoverTransition, var(--arrowHoverTransition));
+      }
+      
+      .HoverArrow__tipPath {
+        transform: none;
+        transition: transform
+          var(--hoverTransition, 250ms cubic-bezier(0.215, 0.61, 0.355, 1));
+      }
+      
+      &:hover .HoverArrow__linePath {
+        opacity: 1;
+      }
+      
+      &:hover .HoverArrow__tipPath {
+        transform: translateX(4px);
+      }
+      
+      
+      &:hover .HoverArrow__linePath {
+        opacity: 1;
+      }
+  }
+  
 
 .title{
     display: flex;
@@ -81,7 +144,7 @@ main{
         max-width: 600px;
         margin-left: 30px;
     }
-        
+     
 }
 
 
