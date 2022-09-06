@@ -18,23 +18,31 @@ main{
     margin: 0px auto;
     padding: 0px 1rem;
     overflow: hidden;
+    height: 100vh;
+
+    .lern-more{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+
+    }
+    
 }
-.learn-more{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
+
 .stripe-button-two {
-    margin-top: 25px;
-    border: 0;
-    outline: 0;
-    background: hsla(0, 67%, 39%, 0.2);
-    border-radius: 50px;
-    color: rgb(0, 0, 0);
-    font-size: 0.875rem;
-    font-weight: 600;
-    padding: 12px 25px;
-    transition-property: background-color, opacity;
+  outline: 0;
+  background: rgba(255, 255, 255, 0.22);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(7.5px);
+  -webkit-backdrop-filter: blur(7.5px);
+  border: 1px solid rgba(255, 255, 255, 0.54);
+  border-radius: 50px;
+  color: rgb(255, 255, 255);
+  font-size: 0.875rem;
+  font-weight: 600;
+  padding: 12px 50px;
+  transition-property: background-color, opacity;
     svg {
         margin-left: 8px;
         vertical-align: auto;
@@ -81,6 +89,9 @@ main{
       &:hover .HoverArrow__linePath {
         opacity: 1;
       }
+      @media (min-width: 900px) {
+        display: none;
+    }
   }
   
 
@@ -134,13 +145,12 @@ main{
 
     }
     @media (max-width: 900px) {
-        position: relative;
+        position: absolute;
         z-index: -1;
         left: unset;
         max-width: unset;
         mask-image: linear-gradient(to right, transparent, rgb(0, 0, 0));
         overflow: hidden;
-        width: 100%;
         max-width: 600px;
         margin-left: 30px;
     }
