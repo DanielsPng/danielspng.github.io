@@ -166,7 +166,7 @@ header-component nav {
 
 header-component nav .logo {
   color: black;
-  font-family: ui-sans-serif;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   font-weight: bolder;
   font-size: 30px;
   top: 0;
@@ -184,11 +184,13 @@ header-component nav .logo {
   display: flex;
   -webkit-transition: .2s ease-in-out;
   transition: .2s ease-in-out;
+  background-color: #bf3f3f;
+  color: white;
 }
 
 header-component nav .logo:hover {
-  background-color: #bf3f3f;
-  color: white;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.596) 10px 10px 30px;
+          box-shadow: rgba(0, 0, 0, 0.596) 10px 10px 30px;
 }
 
 header-component nav a {
