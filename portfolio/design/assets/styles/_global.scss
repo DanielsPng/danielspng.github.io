@@ -180,20 +180,32 @@ main{
     
     }
     z-index: -1;
-    height: 100vh;
+    height: 120vh;
     background-color: firebrick;
+    P{
+      width: 100%;
+      font-family: 'Uni Sans', sans-serif;
+      position: absolute;
+      font-size: 5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 75vh;
+    }
   
 
 .slider {
   width: 100vw;
   height: 100vh;
+
+
 }
 
 .slide {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 50vh;
+  height: 70vh;
   position: absolute;
   width: 100%;
 
@@ -231,11 +243,13 @@ main{
   
   &--left {
     transform: translate(0.85%, -10px);
+    animation: float 5s cubic-bezier(0.91, -0.03, 0.17, 0.75) infinite;
   }
   
   &--right {
     top: 5vmin;
     transform: translate(-0.75%, 10px);
+    animation: float 6s  infinite;
   }
 }
 

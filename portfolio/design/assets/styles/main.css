@@ -157,7 +157,7 @@ main {
 
 .presentation {
   z-index: -1;
-  height: 100vh;
+  height: 120vh;
   background-color: firebrick;
 }
 .presentation .melts {
@@ -165,6 +165,16 @@ main {
   z-index: 0;
   display: flex;
   position: absolute;
+}
+.presentation P {
+  width: 100%;
+  font-family: "Uni Sans", sans-serif;
+  position: absolute;
+  font-size: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 75vh;
 }
 .presentation .slider {
   width: 100vw;
@@ -174,7 +184,7 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 50vh;
+  height: 70vh;
   position: absolute;
   width: 100%;
 }
@@ -203,10 +213,14 @@ main {
 }
 .presentation .slide__image--left {
   transform: translate(0.85%, -10px);
+  -webkit-animation: float 5s cubic-bezier(0.91, -0.03, 0.17, 0.75) infinite;
+          animation: float 5s cubic-bezier(0.91, -0.03, 0.17, 0.75) infinite;
 }
 .presentation .slide__image--right {
   top: 5vmin;
   transform: translate(-0.75%, 10px);
+  -webkit-animation: float 6s infinite;
+          animation: float 6s infinite;
 }
 
 @-webkit-keyframes float {
