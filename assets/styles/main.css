@@ -761,6 +761,7 @@ main > div:last-child {
 }
 
 footer {
+  position: relative;
   justify-content: space-around;
   align-items: center;
   display: flex;
@@ -808,19 +809,15 @@ footer .socials > a:hover > svg {
   }
 }
 footer .davi-statue {
+  position: absolute;
   z-index: 0;
-  width: 500px;
+  width: 300px;
   right: 0;
   opacity: 0.3;
   margin-left: 50%;
   bottom: 0;
   -webkit-mask-image: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, #000000 50%, #000000 100%);
           mask-image: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, #000000 50%, #000000 100%);
-}
-@media (max-width: 900px) {
-  footer .davi-statue {
-    width: 300px;
-  }
 }
 footer .menu {
   text-align: center;

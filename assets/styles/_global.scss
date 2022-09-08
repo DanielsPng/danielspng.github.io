@@ -671,6 +671,7 @@ body {
 
 
 footer {
+  position: relative;
   justify-content: space-around;
   align-items: center;
   display: flex;
@@ -736,8 +737,9 @@ footer {
   }
 
   .davi-statue{
+    position: absolute;
     z-index: 0;
-    width: 500px;
+    width: 300px;
     right: 0;
     opacity: 0.3;
     margin-left: 50%;
@@ -745,12 +747,6 @@ footer {
 
     mask-image: linear-gradient(to right, #00000000 0%, #000000 50%, #000000 100%);
   
-  }
-  @media (max-width: 900px) {
-    .davi-statue{
-      width: 300px;
-    }
-
   }
   
   .menu{
