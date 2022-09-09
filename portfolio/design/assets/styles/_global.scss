@@ -272,6 +272,10 @@ main{
   position: absolute;
   overflow: hidden;
   z-index: 1;
+
+  pointer-events: none;
+  user-select: none;
+
 }
 
 .programs{
