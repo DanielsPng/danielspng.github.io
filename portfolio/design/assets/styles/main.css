@@ -194,7 +194,7 @@ main {
   transform: translate(0);
   opacity: 1;
   transition-delay: 0.5s;
-  filter: blur(0) drop-shadow(0px 10px 30px rgba(0, 0, 0, 0.35));
+  filter: drop-shadow(0px 10px 30px rgba(0, 0, 0, 0.35));
 }
 .presentation .slide__images {
   position: relative;
