@@ -180,7 +180,7 @@ main {
 }
 .presentation .slider {
   width: 100vw;
-  height: 100vh;
+  height: 120vh;
 }
 .presentation .slide {
   display: flex;
@@ -223,6 +223,28 @@ main {
   transform: translate(-0.75%, 10px);
   -webkit-animation: float 5s infinite;
           animation: float 5s infinite;
+}
+
+.programs {
+  height: 100vh;
+  background-color: #0f1b2e;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+.programs .text-program {
+  width: 100%;
+  font-family: "Uni Sans", sans-serif;
+  font-weight: bold;
+  position: absolute;
+  font-size: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  color: #f1f1f1;
 }
 
 @-webkit-keyframes float {
