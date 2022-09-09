@@ -185,6 +185,7 @@ main{
     P{
       width: 100%;
       font-family: 'Uni Sans', sans-serif;
+      font-weight: bold;
       position: absolute;
       font-size: 5rem;
       display: flex;
@@ -195,63 +196,63 @@ main{
     }
   
 
-.slider {
-  width: 100vw;
-  height: 100vh;
-
-
-}
-
-.slide {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 70vh;
-  position: absolute;
-  width: 100%;
-
-  &:target {
-
-    .slide__image {
-      transform: translate(0);
-      opacity: 1;
-      transition-delay: 0.5s;
-      filter: blur(0) drop-shadow(0px 10px 30px rgba(0,0,0,0.35));
+    .slider {
+      width: 100vw;
+      height: 100vh;
+    
+    
     }
-  }
-}
-
-
-
-.slide__images {
-  position: relative;
-  width: 100%;
-  max-width: 900px;
-  margin: 0 20px;
-}
-
-.slide__image {
-  position: absolute;
-  width: 100%;
-  opacity: 0;
-  transition: all 0.5s ease-in-out 0s;
-  filter: blur(10px) drop-shadow(0px 10px 30px rgba(0,0,0,0.35));
-  will-change: transform, opacity, filter;
-
-  svg {
-    display: block;
-  }
-  
-  &--left {
-    transform: translate(0.85%, -10px);
-    animation: float 5s cubic-bezier(0.91, -0.03, 0.17, 0.75) infinite;
-  }
-  
-  &--right {
-    top: 5vmin;
-    transform: translate(-0.75%, 10px);
-    animation: float 6s  infinite;
-  }
+    
+    .slide {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 70vh;
+      position: absolute;
+      width: 100%;
+    
+      &:target {
+    
+        .slide__image {
+          transform: translate(0);
+          opacity: 1;
+          transition-delay: 0.5s;
+          filter: blur(0) drop-shadow(0px 10px 30px rgba(0,0,0,0.35));
+        }
+      }
+    }
+    
+    
+    
+    .slide__images {
+      position: relative;
+      width: 100%;
+      max-width: 900px;
+      margin: 0 20px;
+    }
+    
+    .slide__image {
+      position: absolute;
+      width: 100%;
+      opacity: 1;
+      transition: all 0.5s ease-in-out 0s;
+      filter:  drop-shadow(20px 20px 10px rgba(0,0,0,0.35));
+      will-change: transform, opacity, filter;
+    
+      svg {
+        display: block;
+      }
+      
+      &--left {
+        transform: translate(0.85%, -10px);
+        animation: float 4s cubic-bezier(0.91, -0.03, 0.17, 0.75) infinite;
+      }
+      
+      &--right {
+        top: 5vmin;
+        transform: translate(-0.75%, 10px);
+        animation: float 5s  infinite;
+      }
 }
 
 
