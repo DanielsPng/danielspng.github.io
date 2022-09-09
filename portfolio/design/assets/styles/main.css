@@ -158,7 +158,7 @@ main {
 .presentation {
   z-index: -1;
   height: 120vh;
-  background-color: firebrick;
+  background-color: #b22222;
 }
 .presentation .melts {
   width: 100%;
@@ -223,6 +223,14 @@ main {
   transform: translate(-0.75%, 10px);
   -webkit-animation: float 5s infinite;
           animation: float 5s infinite;
+}
+
+.broje {
+  position: absolute;
+}
+
+.spider-morales {
+  position: absolute;
 }
 
 .programs {
