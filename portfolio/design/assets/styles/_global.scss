@@ -33,6 +33,31 @@ body {
   background: #f1f1f1;
   background-repeat: no-repeat;
   overflow-x: hidden;
+
+  /* width */
+  &::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  /* track */
+  &::-webkit-scrollbar-track {
+    background: var(--black);
+  }
+
+  /* handle */
+  &::-webkit-scrollbar-thumb {
+    background: var(--red);
+  }
+
+  /* handle on hover */
+  &::-webkit-scrollbar-thumb:hover {
+    background: var(--red-light);
+  }
+
+  &.active {
+    overflow: hidden;
+    height: calc(100vh - 1rem);
+  }
 }
 
 
@@ -256,7 +281,7 @@ main{
       &--right {
         top: 5vmin;
         transform: translate(-0.75%, 10px);
-        animation: float 5s  infinite;
+        animation: float 5s  cubic-bezier(0.91, -0.03, 0.17, 0.75) infinite;
       }
 }
 
