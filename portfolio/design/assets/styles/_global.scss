@@ -325,11 +325,17 @@ main{
     justify-content: center;
     height: 100%;
     color: #f1f1f1;
-    @media (max-width: 900px) {
+
+  }
+  @media (max-width: 900px) {
+
+    height: 50vh;
+    .text-program{
       font-size: 3rem;
-      margin-top: -240px;
-  }
-  }
+
+    }
+ 
+}
 }
 
 

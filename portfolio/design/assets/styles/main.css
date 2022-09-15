@@ -288,9 +288,11 @@ main {
   color: #f1f1f1;
 }
 @media (max-width: 900px) {
+  .programs {
+    height: 50vh;
+  }
   .programs .text-program {
     font-size: 3rem;
-    margin-top: -240px;
   }
 }
 
