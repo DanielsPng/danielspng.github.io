@@ -68,6 +68,7 @@ main{
     margin: 0px auto;
     padding: 0px 1rem;
     overflow: hidden;
+    height: 88vh;
 
 }
 .learn-more{
@@ -78,7 +79,7 @@ main{
 
 .stripe-button-two {
   outline: 0;
-  background: rgba(155, 9, 9, 0.22);
+  background: rgba(155, 9, 9, 0.459);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(7.5px);
   -webkit-backdrop-filter: blur(7.5px);
@@ -186,6 +187,7 @@ main{
 
     }
     @media (max-width: 900px) {
+      display: none;
         position: relative;
         z-index: -1;
         left: unset;
@@ -196,8 +198,36 @@ main{
         margin-left: -120px;
         margin-top: -169px;
     }
+
      
 }
+
+.spider-img-bad{
+  position: absolute;
+  bottom: 0;
+  margin-bottom: -10px;
+  right: 0px;
+  max-width: 129vh;
+  z-index: 0;
+
+  > img {
+    width: 100%;
+    
+
+    pointer-events: none;
+    user-select: none;
+    
+
+  }
+  @media (min-width: 900px) {
+    display: none;
+  }
+
+   
+}
+
+
+
 
 
 .presentation{
@@ -210,7 +240,9 @@ main{
         z-index: 0;
         display: flex;
         position: absolute;
-    
+        @media (max-width: 900px) {
+          display: none;
+        }
     }
 
     P{
