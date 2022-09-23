@@ -46,12 +46,12 @@ body {
 
   /* handle */
   &::-webkit-scrollbar-thumb {
-    background: var(--red);
+    background: rgb(70, 24, 70);
   }
 
   /* handle on hover */
   &::-webkit-scrollbar-thumb:hover {
-    background: var(--red-light);
+    background: rgb(114, 32, 114);
   }
 
   &.active {
@@ -95,7 +95,7 @@ main{
         height: 100%;
         object-fit: cover;
         filter: brightness(35%);
-        -webkit-mask-image: linear-gradient(#0e0d0d03 0%, #0e0d0d 25%, #0e0d0d4f 95%);
+        mask-image  : linear-gradient(#0e0d0d03 0%, #0e0d0d 25%, #0e0d0d4f 95%);
         z-index: 0;
         pointer-events: none;
         user-select: none;
@@ -117,3 +117,59 @@ main{
 
 
 }
+
+
+.designer{
+  
+  position: absolute;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  mask-image: linear-gradient(#00000000 0%, #000000 25%, #00000000 95%);
+
+  p{
+    position: absolute;
+    color: #ffffff;
+    font-size: calc(1.7em + 3vw);
+    z-index: 1;
+    text-align: center;
+  }
+  img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(40%);
+
+    z-index: 0;
+    pointer-events: none;
+    user-select: none;
+  }
+
+  button{
+    margin-top: 10px;
+    z-index: 1;
+    align-items: center;
+    padding: 6px 35px;
+    border: 1px solid rgb(255, 255, 255); 
+    color: white;
+    background-color: transparent;
+    border-radius: 4px;
+    transition: all .4s ease-in-out;
+    position: relative;
+    cursor: pointer;
+    outline: none;
+    border-image: 1px solid linear-gradient(to right, #BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C, #BF953F);
+    background-size: 400%;
+    font-size: 20px;
+    font-weight: 350;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    top: 18vh;
+  } 
+  button:hover{
+    color: white;
+    background: rgba(255, 255, 255, 0.189);
+  }
+  }
