@@ -30,7 +30,7 @@ html{
 body {
   font-family: 'Uni Sans', sans-serif;
   font-weight: 500;
-  background: #0e0d0d;
+  background: #000000;
   background-repeat: no-repeat;
   overflow-x: hidden;
 
@@ -87,7 +87,7 @@ main{
       }
     }
 
-      img{
+      .bg{
       
         position: absolute;
         top: 0px;
@@ -101,6 +101,19 @@ main{
         user-select: none;
         }
 
-   
+        .indication{
+          justify-content: center;
+          display: flex;
+          align-items: center;
+
+          img{
+            bottom: 0;
+            top: 40%;
+            position: absolute;
+            width: 20px;
+            height: 100%;
+           }
+        }
+
 
 }
