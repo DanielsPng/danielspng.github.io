@@ -7,7 +7,6 @@ html{
     margin: 0px;
     padding: 0px;
 }
-
 @font-face {
   font-family: 'Uni Sans';
   src: url('https://res.cloudinary.com/muhammederdem/raw/upload/v1536168547/unisans-font/UniSansHeavyCAPS.woff2') format('woff2'),
@@ -65,28 +64,29 @@ body {
 main{ 
 
     width: 100%;
-    max-width: 1200px;
+
     margin: 0px auto;
-    padding: 0px 1rem;
     overflow: hidden;
     height: 100vh;
 
-    h1{
+    .title{
       justify-content: center;
-      height: 50vh;
       display: flex;
       align-items: center;
-      position: absolute;
-      top: 15%;
 
-      color: var(--white);
-      text-align: center;
-      font-size: calc(2.5em + 3vw);
-  
-      z-index: 1;
+      h1{
+
+        position: absolute;
+        top: 30%;
+        color: var(--white);
+        font-weight: 200;
+        text-align: center;
+        font-size: calc(2.5em + 3vw);
+    
+        z-index: 0;
+      }
     }
 
-    .bg{
       img{
       
         position: absolute;
@@ -95,12 +95,11 @@ main{
         height: 100%;
         object-fit: cover;
         filter: brightness(35%);
-        -webkit-mask-image: linear-gradient(rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 25%, rgba(0, 0, 0, 0) 95%);
+        -webkit-mask-image: linear-gradient(#0e0d0d03 0%, #0e0d0d 25%, #0e0d0d4f 95%);
         z-index: 0;
         pointer-events: none;
         user-select: none;
         }
-    }
 
    
 
